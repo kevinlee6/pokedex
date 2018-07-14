@@ -22,6 +22,6 @@ class Trainer {
     }
 
     add(pokemonObj) {
-       
+       pokemon[pokemonObj.name] = pokemonObj;
     }
 }
