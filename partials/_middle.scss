@@ -3,4 +3,11 @@
     background-color: lightblue;
     max-width: 550px;
     width: 100%;
+
+    #search {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 3% 0;
+    }
 }

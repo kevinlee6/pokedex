@@ -25,15 +25,26 @@
 
         <div id='middle' class='row'> 
             <!-- TO DO: add hidden class later for animations stuff -->
-            <div class="col-sm-4"></div>
-
-            <div class="col-sm-4">
-                <div>
-
-                </div>
+            <div id='search' class="row">
+                SEARCH BY:
+                <select name="select" id="select">
+                    <option value="name">NAME</option>
+                    <option value="id">ID</option>
+                </select>
+                <form>
+                    <input type="text" id='input-name' placeholder="ENTER NAME"/>
+                    <input type="text" id='input-id' class='hidden' placeholder="ENTER ID" />
+                    <button id='search-btn'>ENTER</button>
+                </form>
             </div>
 
-            <div class="col-sm-4"></div>
+            <div class='row'>
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-4"></div>
+
+                <div class="col-sm-4"></div>
+            </div>
         </div>
 
         <div id='bottom' class="row">
@@ -46,7 +57,7 @@
                 </div>
     
                 <div class="col-sm-4 corner"></div>
-            </div>
+        </div>
     </div>
     
     <!-- Axios library -->

@@ -29,22 +29,26 @@ class Trainer {
     }
 }
 
-
+// My starter 3 Pokemon, and new IdToName hash
 const myPokemonIds = ['59', '130', '149'],
       pokemonIdToName = {};
+
+// Instantiate trainer
 const kevin = new Trainer('Kevin');
 
-myPokemonIds.forEach(id => {
-    axios.get(`https://www.pokeapi.co/api/v2/pokemon/${id}`)
-         .then(response => {
-            const data = response.data;
-            console.log(data);
-            const pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.sprites.front_default);
+// myPokemonIds.forEach(id => {
+//     axios.get(`https://www.pokeapi.co/api/v2/pokemon/${id}`)
+//          .then(response => {
+//             const data = response.data;
+//             console.log(data);
 
-            // Add to ID:Name hash, so user can use optional search by ID in O(1) time instead of potentially cycling through whole Trainer.pokemon hash
-            pokemonIdToName[pokemon.id] = pokemon.name;
+//             // Instantiate Pokemons object to be added to Pokedex
+//             const pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.sprites.front_default);
 
-            // Add Pokemon to Pokedex
-            kevin.add(pokemon);
-        })
-});
+//             // Add to ID:Name hash, so user can use optional search by ID in O(1) time instead of potentially cycling through whole Trainer.pokemon hash
+//             pokemonIdToName[pokemon.id] = pokemon.name;
+
+//             // Add Pokemon to Pokedex
+//             kevin.add(pokemon);
+//         })
+// });
