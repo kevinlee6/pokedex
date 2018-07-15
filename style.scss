@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'pokemon';
+    src: url('./font/pokemon.ttf');
+}
 @import './partials/variables';
 @import './partials/pokedex';
 @import './partials/top';
@@ -10,6 +14,7 @@ html {
 
 body {
     height: 100%;
+    font-family: 'pokemon';
 }
 
 .hidden {

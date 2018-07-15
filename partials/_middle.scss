@@ -9,5 +9,31 @@
         justify-content: space-evenly;
         align-items: center;
         margin: 3% 0;
+        margin-left: 3%;
+        font-family: 'pokemon';
+        white-space: nowrap;
+
+        #select {
+            height: 30px;
+        }
+
+        form {
+            input {
+                padding: 5px;
+                width: 60%;
+                margin-left: 3%;
+            }
+
+            #search-btn {
+                border-radius: 10px;
+                padding: 5px 8px;
+                background-color: #8f8;
+                border: 1px solid green;
+
+                &:hover {
+                    background-color: #0f0;
+                }
+            }
+        }
     }
 }
