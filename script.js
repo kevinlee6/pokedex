@@ -28,7 +28,7 @@ class Trainer {
     }
 }
 
-let myPokemonIds = ['59', '130', '149'];
+let myPokemonIds = [59, 130, 149];
 const kevin = new Trainer('Kevin');
 
 myPokemonIds.forEach(id => {
