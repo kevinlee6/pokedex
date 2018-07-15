@@ -13,17 +13,21 @@
   max-width: 550px;
   margin: 0 auto;
   height: 15%;
-  background-color: red;
+  background: linear-gradient(170deg, #ff8686, red);
+  border: 2px solid red;
   border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid blue;
 }
 
-#top .half-circle {
+#top #half-circle-top {
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 100px;
   height: 50px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  background: -webkit-gradient(linear, right top, left top, from(red), to(#ff7e7e));
+  background: linear-gradient(to left, red, #ff7e7e);
   border: 5px solid black;
   border-bottom: 0;
 }
@@ -37,6 +41,47 @@
   border-top-right-radius: 10px;
   border: 2px solid black;
   border-bottom: 0;
+}
+
+#bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  height: 15%;
+  border: 2px solid red;
+  background: -webkit-gradient(linear, right top, left top, from(red), to(#f05252));
+  background: linear-gradient(to left, red, #f05252);
+  border-top: 0;
+  border-radius: 0 0 20px 20px;
+}
+
+#bottom #half-circle-bottom {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 5px solid black;
+  border-top: 0;
+}
+
+#bottom .smaller-half-circle {
+  margin: 0 auto 40% auto;
+  width: 20px;
+  height: 10px;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 2px solid black;
+  border-top: 0;
 }
 
 html {
