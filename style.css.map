@@ -1,8 +1,10 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AEAA,AAAA,QAAQ,CAAC;EACL,MAAM,EAAE,IAAI;CAwBf;;AAzBD,AAGI,QAHI,CAGJ,IAAI,CAAC;EACD,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,MAAM;EACd,MAAM,EAAE,GAAG;EACX,gBAAgB,EDVX,GAAG;ECWR,aAAa,EAAE,aAAa;CAa/B;;AAxBL,AAiBQ,QAjBA,CAGJ,IAAI,CAcA,YAAY,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,eAAe;EACvB,gBAAgB,EAAE,GAAG;EACrB,aAAa,EAAE,eAAe;CACjC;;AFpBT,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,IAAI;CACf;;AAED,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,IAAI;CACf",
     "sources": [
-        "style.scss"
+        "style.scss",
+        "partials/_variables.scss",
+        "partials/_pokedex.scss"
     ],
     "names": [],
     "file": "style.css"
