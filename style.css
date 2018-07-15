@@ -10,6 +10,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
 }
 
 #top {
@@ -21,14 +25,13 @@
           justify-content: space-between;
   width: 100%;
   max-width: 550px;
-  margin: 0 auto;
   height: 16%;
   background: linear-gradient(170deg, #ff8686, red);
   border: 5px solid red;
   border-top: 3px solid red;
   border-right: 2px solid red;
   border-radius: 10px 10px 0 0;
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid #000086;
 }
 
 #top #half-circle-top {
@@ -44,14 +47,14 @@
 }
 
 #top .smaller-half-circle {
-  margin: 60% auto 0 auto;
-  width: 25px;
-  height: 15px;
+  position: relative;
+  z-index: 1;
+  margin: 57% auto 0 auto;
+  width: 22px;
+  height: 22px;
   background-color: white;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 25px;
   border: 3px solid black;
-  border-bottom: 0;
 }
 
 #bottom {
@@ -63,7 +66,6 @@
           justify-content: space-between;
   width: 100%;
   max-width: 550px;
-  margin: 0 auto;
   height: 16%;
   border: 5px solid red;
   border-right: 2px solid red;
@@ -83,22 +85,24 @@
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   border: 2px solid black;
-  border-top: 0;
+  border-top: 1px solid black;
 }
 
 #bottom .smaller-half-circle {
-  margin: 0 auto 40% auto;
-  width: 25px;
-  height: 15px;
-  background-color: white;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border: 3px solid black;
+  margin: 0 auto -20% auto;
+  width: 20px;
+  height: 10px;
+  background-color: #4e4e4e;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   border-top: 0;
 }
 
 #middle {
-  height: 100px;
+  height: 68%;
+  background-color: lightblue;
+  max-width: 550px;
+  width: 100%;
 }
 
 html {

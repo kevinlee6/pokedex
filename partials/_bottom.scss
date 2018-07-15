@@ -3,7 +3,6 @@
     justify-content: space-between;
     width: 100%;
     max-width: 550px;
-    margin: 0 auto;
     height: 16%;
     border: 5px solid $main-color;
     border-right: 2px solid $main-color;
@@ -12,9 +11,9 @@
     border-top: 3px;
     border-radius: 0 0 20px 20px;
 
-    .corner {
+    // .corner {
 
-    }
+    // }
 
     #half-circle-bottom {
         align-self: flex-start;
@@ -24,17 +23,16 @@
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
         border: 2px solid black;
-        border-top: 0;
+        border-top: 1px solid black;
     }
 
     .smaller-half-circle {
-        margin: 0 auto 40% auto;
-        width: 25px;
-        height: 15px;
-        background-color: white;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border: 3px solid black;
+        margin: 0 auto -20% auto;
+        width: 20px;
+        height: 10px;
+        background-color: rgb(78, 78, 78);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         border-top: 0;
     }
 }
