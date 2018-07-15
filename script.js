@@ -1,46 +1,50 @@
-// TODO: create another hash which links pokemon ID to name
-// so there can be two easy ways to search for the pokemon.
+class Pokemon {
+    constructor(name, id, hp, atk, def, abil, photo) {
+        this.name = name;
+        this.id = id;
+        this.hp = hp;
+        this.atk = atk;
+        this.def = def;
+        this.abil = abil;
+        this.photo = photo;
+    }
+}
 
-// class Pokemon {
-//     constructor(name, hp, atk, def, abil, photo) {
-//         this.name = name;
-//         this.hp = hp;
-//         this.atk = atk;
-//         this.def = def;
-//         this.abil = abil;
-//         this.photo = photo;
-//     }
-// }
+class Trainer {
+    constructor(name) {
+        this.name = name;
+        this.pokemon = {};
+    }
 
-// class Trainer {
-//     constructor(name) {
-//         this.name = name;
-//         this.pokemon = {};
-//     }
+    all() {
+        return this.pokemon;
+    }
 
-//     all() {
-//         return this.pokemon;
-//     }
+    get(name) {
+        return this.pokemon[name];
+    }
 
-//     get(name) {
-//         return this.pokemon[name];
-//     }
+    add(pokemonObj) {
+       this.pokemon[pokemonObj.name] = pokemonObj;
+    }
+}
 
-//     add(pokemonObj) {
-//        this.pokemon[pokemonObj.name] = pokemonObj;
-//     }
-// }
 
-// let myPokemonIds = [59, 130, 149];
-// const kevin = new Trainer('Kevin');
+const myPokemonIds = ['59', '130', '149'],
+      pokemonIdToName = {};
+const kevin = new Trainer('Kevin');
 
-// myPokemonIds.forEach(id => {
-//     axios.get(`https://www.pokeapi.co/api/v2/pokemon/${id}`)
-//          .then(response => {
-//             const data = response.data;
-//             console.log(data);
-//             const pokemon = new Pokemon(data.name, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.sprites.front_default);
-            
-//             kevin.add(pokemon);
-//         })
-// });
+myPokemonIds.forEach(id => {
+    axios.get(`https://www.pokeapi.co/api/v2/pokemon/${id}`)
+         .then(response => {
+            const data = response.data;
+            console.log(data);
+            const pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.sprites.front_default);
+
+            // Add to ID:Name hash, so user can use optional search by ID in O(1) time instead of potentially cycling through whole Trainer.pokemon hash
+            pokemonIdToName[pokemon.id] = pokemon.name;
+
+            // Add Pokemon to Pokedex
+            kevin.add(pokemon);
+        })
+});
