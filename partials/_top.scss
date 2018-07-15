@@ -1,0 +1,35 @@
+#top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    height: 15%;
+    background-color: $main-color;
+    border-radius: 10px 10px 0 0;
+
+    .corner {
+
+    }
+
+    .half-circle {
+        align-self: flex-end;
+        width: 100px;
+        height: 50px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border: 5px solid black;
+        border-bottom: 0;
+    }
+
+    .smaller-half-circle {
+        margin: 60% auto 0 auto;
+        width: 20px;
+        height: 10px;
+        background-color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: 2px solid black;
+        border-bottom: 0;
+    }
+}
