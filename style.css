@@ -1,5 +1,15 @@
 #pokedex {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #top {
@@ -12,9 +22,11 @@
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
-  height: 15%;
+  height: 16%;
   background: linear-gradient(170deg, #ff8686, red);
-  border: 2px solid red;
+  border: 5px solid red;
+  border-top: 3px solid red;
+  border-right: 2px solid red;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid blue;
 }
@@ -52,8 +64,10 @@
   width: 100%;
   max-width: 550px;
   margin: 0 auto;
-  height: 15%;
-  border: 2px solid red;
+  height: 16%;
+  border: 5px solid red;
+  border-right: 2px solid red;
+  border-bottom: 2px solid red;
   background: -webkit-gradient(linear, right top, left top, from(red), to(#f05252));
   background: linear-gradient(to left, red, #f05252);
   border-top: 3px;

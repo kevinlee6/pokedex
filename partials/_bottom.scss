@@ -4,8 +4,10 @@
     width: 100%;
     max-width: 550px;
     margin: 0 auto;
-    height: 15%;
-    border: 2px solid $main-color;
+    height: 16%;
+    border: 5px solid $main-color;
+    border-right: 2px solid $main-color;
+    border-bottom: 2px solid $main-color;
     background: linear-gradient(to left, $main-color, rgb(240, 82, 82));
     border-top: 3px;
     border-radius: 0 0 20px 20px;

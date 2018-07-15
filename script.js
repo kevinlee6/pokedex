@@ -1,3 +1,6 @@
+// TODO: create another hash which links pokemon ID to name
+// so there can be two easy ways to search for the pokemon.
+
 // class Pokemon {
 //     constructor(name, hp, atk, def, abil, photo) {
 //         this.name = name;

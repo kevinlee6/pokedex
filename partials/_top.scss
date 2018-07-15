@@ -4,9 +4,11 @@
     width: 100%;
     max-width: 550px;
     margin: 0 auto;
-    height: 15%;
+    height: 16%;
     background: linear-gradient(170deg, rgb(255, 134, 134), $main-color);
-    border: 2px solid $main-color;
+    border: 5px solid $main-color;
+    border-top: 3px solid $main-color;
+    border-right: 2px solid $main-color;
     border-radius: 10px 10px 0 0;
     border-bottom: 1px solid blue;
 
