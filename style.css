@@ -97,11 +97,19 @@
   border-top: 0;
 }
 
+#middle {
+  height: 100px;
+}
+
 html {
   height: 100%;
 }
 
 body {
   height: 100%;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
