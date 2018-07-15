@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pokedex</title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+    <div id='pokedex'>
+        <div id='top' class="row">
+            <div class="col-sm-4 corner"></div>
+
+            <div class="col-sm-4" id='half-circle-top'>
+                <div class='smaller-half-circle'>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4 corner"></div>
+        </div>
+
+        <div id='middle' class='row'> 
+            <!-- TO DO: add hidden class later for animations stuff -->
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-4">
+                <div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-4"></div>
+        </div>
+
+        <div id='bottom' class="row">
+                <div class="col-sm-4 corner"></div>
     
+                <div class="col-sm-4" id='half-circle-bottom'>
+                    <div class='smaller-half-circle'>
+    
+                    </div>
+                </div>
+    
+                <div class="col-sm-4 corner"></div>
+            </div>
+    </div>
+    
+    <!-- Axios library -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

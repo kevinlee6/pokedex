@@ -1,0 +1,17 @@
+@import './partials/variables';
+@import './partials/pokedex';
+@import './partials/top';
+@import './partials/bottom';
+@import './partials/middle';
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}

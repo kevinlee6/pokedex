@@ -1,0 +1,119 @@
+#pokedex {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+#top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 550px;
+  height: 16%;
+  background: linear-gradient(170deg, #ff8686, red);
+  border: 5px solid red;
+  border-top: 3px solid red;
+  border-right: 2px solid red;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #000086;
+}
+
+#top #half-circle-top {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 100px;
+  height: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background: -webkit-gradient(linear, right top, left top, from(red), to(#ff7e7e));
+  background: linear-gradient(to left, red, #ff7e7e);
+  border: 2px solid black;
+}
+
+#top .smaller-half-circle {
+  position: relative;
+  z-index: 1;
+  margin: 57% auto 0 auto;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 25px;
+  border: 3px solid black;
+}
+
+#bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 550px;
+  height: 16%;
+  border: 5px solid red;
+  border-right: 2px solid red;
+  border-bottom: 2px solid red;
+  background: -webkit-gradient(linear, right top, left top, from(red), to(#f05252));
+  background: linear-gradient(to left, red, #f05252);
+  border-top: 3px;
+  border-radius: 0 0 20px 20px;
+}
+
+#bottom #half-circle-bottom {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 2px solid black;
+  border-top: 1px solid black;
+}
+
+#bottom .smaller-half-circle {
+  margin: 0 auto -20% auto;
+  width: 20px;
+  height: 10px;
+  background-color: #4e4e4e;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 0;
+}
+
+#middle {
+  height: 68%;
+  background-color: lightblue;
+  max-width: 550px;
+  width: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
