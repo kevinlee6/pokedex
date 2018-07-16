@@ -10,16 +10,20 @@
   font-family: 'pokemon';
 }
 
-#start #temp-btn {
+#start #start-name {
+  padding: 5px;
+}
+
+#start #start-btn {
   border-radius: 20px;
   padding: 5px 10px;
 }
 
-#start #temp-btn:hover {
+#start #start-btn:hover {
   background: #ddd;
 }
 
-#start #temp-btn:focus {
+#start #start-btn:focus {
   outline: none;
 }
 
@@ -126,7 +130,7 @@
 
 #middle {
   height: 68%;
-  background-color: lightblue;
+  background-color: rgba(173, 216, 230, 0.4);
   max-width: 550px;
   width: 100%;
 }
