@@ -188,6 +188,13 @@
   background-color: green;
 }
 
+#img-and-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
 #img-and-description #img-container {
   margin-left: 5%;
   padding: 0;
@@ -199,8 +206,19 @@
   width: 100%;
 }
 
-#img-and-description #description {
+#img-and-description #description-container {
   border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#img-and-description #description-container #description {
+  font-family: 'pokemon';
+  font-size: 0.9em;
 }
 
 html {

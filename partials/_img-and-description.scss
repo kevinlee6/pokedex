@@ -1,4 +1,7 @@
 #img-and-description {
+    display: flex;
+    width: 100%;
+    
     #img-container {
         margin-left: 5%;
         padding: 0;
@@ -10,7 +13,14 @@
         }
     }
     
-    #description {
+    #description-container {
         border: 1px solid black;
+        display: flex;
+        align-items: center;
+
+        #description {
+            font-family: 'pokemon';
+            font-size: 0.9em;
+        }
     }
 }

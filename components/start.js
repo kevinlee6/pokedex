@@ -17,8 +17,7 @@ startBtn.addEventListener('click', e => {
 
     // Add starter pokemon to trainer
     myPokemonIds.forEach(id => {
-        axios.get(`https://www.pokeapi.co/api/v2/pokemon/${id}`)
-             .then(response => {
+        axios.get(`https://www.pokeapi.co/api/v2/pokemon/${id}`).then(response => {
                 const data = response.data;
                 console.log(data);
     
@@ -32,13 +31,13 @@ startBtn.addEventListener('click', e => {
                     const data = response.data;
 
                     pokemon.description = data.flavor_text_entries[2].flavor_text;
+
+                    img.setAttribute('src', trainer.pokemon.arcanine.photo);
+
+                    description.textContent = trainer.pokemon.arcanine.description;
                 });
             });
     });
-
-    img.setAttribute('src', trainer.pokemon.arcanine.photo);
-
-    description.textContent = arcanine.description;
 
     // Remove start
     document.body.removeChild(start);
