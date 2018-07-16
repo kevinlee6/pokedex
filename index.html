@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+    <div id="start">
+        <p>Enter your name to get started:</p>
+        <form>
+            <input type="text" id='start-name' placeholder="ENTER NAME" />
+            <input id='start-btn' type="submit" value='ENTER'/>
+        </form>
+    </div>
     <div id='pokedex'>
         <div id='top' class="row">
             <div class="col-sm-4 corner"></div>
@@ -26,7 +33,7 @@
             <div class="col-sm-4 corner"></div>
         </div>
 
-        <div id='middle' class='row'> 
+        <div id='middle' class='row hidden'> 
             <!-- TO DO: add hidden class later for animations stuff -->
             <div id='search' class="row">
                 <select name="select" id="select">
@@ -41,12 +48,10 @@
                 </form>
             </div>
 
-            <div class='row'>
-                <div class="col-sm-4"></div>
+            <div class='row' id='img-and-description'>
+                <div class="col-sm-4" id='img-container'><img id='img' /></div>
 
-                <div class="col-sm-4"></div>
-
-                <div class="col-sm-4"></div>
+                <div class="col-sm-8" id='description'></div>
             </div>
         </div>
 
@@ -70,6 +75,8 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='./components/classes.js'></script>
+    <script src='./components/start.js'></script>
     <script src="script.js"></script>
 </body>
 </html>

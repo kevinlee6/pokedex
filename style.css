@@ -3,6 +3,26 @@
   src: url("./font/pokemon.ttf");
 }
 
+#start {
+  text-align: center;
+  position: relative;
+  top: 30%;
+  font-family: 'pokemon';
+}
+
+#start #temp-btn {
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+#start #temp-btn:hover {
+  background: #ddd;
+}
+
+#start #temp-btn:focus {
+  outline: none;
+}
+
 #pokedex {
   height: 100%;
   min-height: 426px;
@@ -111,7 +131,7 @@
   width: 100%;
 }
 
-#middle #search {
+#search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,25 +146,25 @@
   white-space: nowrap;
 }
 
-#middle #search #select {
+#search #select {
   height: 30px;
   margin: 0 3%;
 }
 
-#middle #search #select:focus {
+#search #select:focus {
   outline: none;
 }
 
-#middle #search form {
+#search form {
   width: 70%;
 }
 
-#middle #search form input {
+#search form input {
   padding: 5px;
   width: 63%;
 }
 
-#middle #search form #search-btn {
+#search form #search-btn {
   width: 27%;
   border-radius: 10px;
   padding: 5px 8px;
@@ -152,15 +172,15 @@
   border: 1px solid green;
 }
 
-#middle #search form #search-btn:hover {
+#search form #search-btn:hover {
   background-color: #0f0;
 }
 
-#middle #search form #search-btn:focus {
+#search form #search-btn:focus {
   outline: none;
 }
 
-#middle #search form #search-btn:active {
+#search form #search-btn:active {
   background-color: green;
 }
 

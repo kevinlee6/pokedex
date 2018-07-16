@@ -1,37 +1,5 @@
-class Pokemon {
-    constructor(name, id, hp, atk, def, abil, photo) {
-        this.name = name;
-        this.id = id;
-        this.hp = hp;
-        this.atk = atk;
-        this.def = def;
-        this.abil = abil;
-        this.photo = photo;
-    }
-}
-
-class Trainer {
-    constructor(name) {
-        this.name = name;
-        this.pokemon = {};
-    }
-
-    all() {
-        return this.pokemon;
-    }
-
-    get(name) {
-        return this.pokemon[name];
-    }
-
-    add(pokemonObj) {
-       this.pokemon[pokemonObj.name] = pokemonObj;
-    }
-}
-
-// My starter 3 Pokemon, and new IdToName hash
-const myPokemonIds = ['59', '130', '149'],
-      pokemonIdToName = {};
+// My starter 3 Pokemon
+const myPokemonIds = ['59', '130', '149'];
 
 // Instantiate trainer
 const kevin = new Trainer('Kevin');
@@ -45,16 +13,29 @@ const kevin = new Trainer('Kevin');
 //             // Instantiate Pokemons object to be added to Pokedex
 //             const pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.sprites.front_default);
 
-//             // Add to ID:Name hash, so user can use optional search by ID in O(1) time instead of potentially cycling through whole Trainer.pokemon hash
-//             pokemonIdToName[pokemon.id] = pokemon.name;
-
 //             // Add Pokemon to Pokedex
 //             kevin.add(pokemon);
 //         })
 // });
 
-const searchBtn = document.getElementById('search-btn');
+const searchBtn = document.getElementById('search-btn'),
+      img = document.getElementById('img'),
+      description = document.getElementById('description'),
+      inputName = document.getElementById('input-name'),
+      inputId = document.getElementById('input-id');
+
+// global var to track pokemon order
+let rotation = 0;
 
 searchBtn.addEventListener('click', e => {
     e.preventDefault();
+    if (!pokemonIdToName[inputId.value]) {
+        alert('This ID is not available in this Pokédex yet!');
+    }
+
+    if (!kevin.get(inputName.value)) {
+        alert('This Pokémon is not avilable in this Pokédex yet!')
+    }
+    
+    img.setAttribute('src', `${kevin.pokemon.pokemonIdToName[id]}`)
 })

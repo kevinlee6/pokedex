@@ -1,0 +1,19 @@
+#start {
+    text-align: center;
+    position: relative;
+    top: 30%;
+    font-family: 'pokemon';
+
+    #temp-btn {
+        border-radius: 20px;
+        padding: 5px 10px;
+
+        &:hover {
+            background: #ddd;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
