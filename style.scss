@@ -2,6 +2,7 @@
     font-family: 'pokemon';
     src: url('./font/pokemon.ttf');
 }
+@import './partials/media-queries';
 @import './partials/animations';
 @import './partials/start';
 @import './partials/variables';
@@ -20,6 +21,8 @@ html {
 body {
     height: 100%;
     font-family: 'pokemon';
+    background-image: url('https://images3.alphacoders.com/628/62865.jpg');
+    background-size: cover;
 }
 
 .hidden {

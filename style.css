@@ -3,11 +3,25 @@
   src: url("./font/pokemon.ttf");
 }
 
+@media screen and (max-width: 400px) {
+  #id-and-name {
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+  #type {
+    font-size: 0.9em;
+  }
+}
+
 #start {
   text-align: center;
   position: relative;
   top: 30%;
   font-family: 'pokemon';
+  background: rgba(188, 188, 188, 0.9);
+  width: 75%;
+  margin: auto;
+  padding: 2% 0;
 }
 
 #start #start-name {
@@ -130,7 +144,7 @@
 
 #middle {
   height: 68%;
-  background-color: rgba(173, 216, 230, 0.4);
+  background-color: rgba(173, 216, 230, 0.96);
   max-width: 550px;
   width: 100%;
 }
@@ -241,6 +255,8 @@ html {
 body {
   height: 100%;
   font-family: 'pokemon';
+  background-image: url("https://images3.alphacoders.com/628/62865.jpg");
+  background-size: cover;
 }
 
 .hidden {

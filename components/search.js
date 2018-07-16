@@ -7,8 +7,8 @@ searchBtn.addEventListener('click', e => {
     let target;
 
     if (inputName.value.length) {
-        if (trainer.get(inputName.value)) {
-            target = trainer.get(inputName.value);
+        if (trainer.get(inputName.value.toLowerCase())) {
+            target = trainer.get(inputName.value.toLowerCase());
             changeData(target);
         } else {
             alert('This Pokémon is not avilable in this Pokédex yet!')
