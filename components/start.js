@@ -2,6 +2,9 @@ const startBtn = document.getElementById('start-btn'),
       startName = document.getElementById('start-name'),
       start = document.getElementById('start');
 
+const img = document.getElementById('img'),
+      description = document.getElementById('description');
+
 let trainer;
 
 startBtn.addEventListener('click', e => {
@@ -24,8 +27,18 @@ startBtn.addEventListener('click', e => {
     
                 // Add Pokemon to Pokedex
                 trainer.add(pokemon);
-            })
+
+                axios.get(`https://www.pokeapi.co/api/v2/pokemon-species/${id}/`).then(response => {
+                    const data = response.data;
+
+                    pokemon.description = data.flavor_text_entries[2].flavor_text;
+                });
+            });
     });
+
+    img.setAttribute('src', trainer.pokemon.arcanine.photo);
+
+    description.textContent = arcanine.description;
 
     // Remove start
     document.body.removeChild(start);

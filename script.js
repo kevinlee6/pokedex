@@ -1,6 +1,4 @@
 const searchBtn = document.getElementById('search-btn'),
-      img = document.getElementById('img'),
-      description = document.getElementById('description'),
       inputName = document.getElementById('input-name'),
       inputId = document.getElementById('input-id');
 
@@ -9,7 +7,7 @@ let rotation = 0;
 
 searchBtn.addEventListener('click', e => {
     e.preventDefault();
-    if (!trainer.pokemonIdToName[inputId.value]) {
+    if (!trainer.idToName[inputId.value]) {
         alert('This ID is not available in this Pokédex yet!');
     }
 
@@ -17,5 +15,5 @@ searchBtn.addEventListener('click', e => {
         alert('This Pokémon is not avilable in this Pokédex yet!')
     }
     
-    img.setAttribute('src', `${trainer.pokemon.pokemonIdToName[id]}`)
+    img.setAttribute('src', `${trainer.pokemon.idToName[id]}`)
 })

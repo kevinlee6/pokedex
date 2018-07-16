@@ -2,6 +2,7 @@
     font-family: 'pokemon';
     src: url('./font/pokemon.ttf');
 }
+@import './partials/animations';
 @import './partials/start';
 @import './partials/variables';
 @import './partials/pokedex';
@@ -9,7 +10,7 @@
 @import './partials/bottom';
 @import './partials/middle';
 @import './partials/middle-search';
-@import './partials/animations';
+@import './partials/img-and-description';
 
 html {
     height: 100%;
