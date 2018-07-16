@@ -5,6 +5,7 @@
 
 #pokedex {
   height: 100%;
+  min-height: 426px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,6 +131,10 @@
   margin: 0 3%;
 }
 
+#middle #search #select:focus {
+  outline: none;
+}
+
 #middle #search form {
   width: 70%;
 }
@@ -149,6 +154,14 @@
 
 #middle #search form #search-btn:hover {
   background-color: #0f0;
+}
+
+#middle #search form #search-btn:focus {
+  outline: none;
+}
+
+#middle #search form #search-btn:active {
+  background-color: green;
 }
 
 html {

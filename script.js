@@ -52,3 +52,9 @@ const kevin = new Trainer('Kevin');
 //             kevin.add(pokemon);
 //         })
 // });
+
+const searchBtn = document.getElementById('search-btn');
+
+searchBtn.addEventListener('click', e => {
+    e.preventDefault();
+})
