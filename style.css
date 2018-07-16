@@ -188,6 +188,18 @@
   background-color: green;
 }
 
+#id-name-type-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  font-family: 'pokemon';
+}
+
 #img-and-description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,6 +219,7 @@
 }
 
 #img-and-description #description-container {
+  width: 100%;
   border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;

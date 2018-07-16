@@ -1,11 +1,12 @@
 class Pokemon {
-    constructor(name, id, hp, atk, def, abil, photo) {
+    constructor(name, id, hp, atk, def, abil, type, photo) {
         this.name = name;
         this.id = id;
         this.hp = hp;
         this.atk = atk;
         this.def = def;
         this.abil = abil;
+        this.type = type;
         this.photo = photo;
 
         this.description = '';
@@ -20,7 +21,7 @@ class Trainer {
     }
 
     all() {
-        return this.pokemon;
+        return Object.values(this.pokemon);
     }
 
     get(name) {
