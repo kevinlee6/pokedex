@@ -29,7 +29,6 @@ startBtn.addEventListener('click', e => {
     myPokemonIds.forEach(id => {
         axios.get(`https://www.pokeapi.co/api/v2/pokemon/${id}`).then(response => {
                 const data = response.data;
-                console.log(data);
     
                 addPokemon(id, data);
             });
