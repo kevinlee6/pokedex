@@ -3,13 +3,23 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pokedex</title>
-    <meta name="description" content="">
+    <title>Pokédex</title>
+    <meta name="description" content="Pokédex app: view their stats and more">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" 
+      type="image/png" 
+      href="./favicon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+    <div id="start">
+        <p>Enter your name to get started:</p>
+        <form>
+            <input type="text" id='start-name' placeholder="ENTER NAME" />
+            <input id='start-btn' type="submit" value='ENTER'/>
+        </form>
+    </div>
     <div id='pokedex'>
         <div id='top' class="row">
             <div class="col-sm-4 corner"></div>
@@ -23,17 +33,40 @@
             <div class="col-sm-4 corner"></div>
         </div>
 
-        <div id='middle' class='row'> 
+        <div id='middle' class='row hidden'> 
             <!-- TO DO: add hidden class later for animations stuff -->
-            <div class="col-sm-4"></div>
+            <div id='search' class="row">
+                <select name="select" id="select">
+                        <option id='select-name' value="name">NAME</option>
+                        <option id='select-id' value="id">ID</option>
+                    </select>
 
-            <div class="col-sm-4">
-                <div>
+                <form>
+                    <input type="text" id='input-name' placeholder="ENTER NAME"/>
+                    <input type="text" id='input-id' class='hidden' placeholder="ENTER ID" />
+                    <input type='submit' value='FIND' id='search-btn' />
+                </form>
+            </div>
 
+            <div id='id-name-type-container'>
+                <p id="id-and-name"></p>
+                <p id="type"></p>
+            </div>
+
+            <div class='row' id='img-and-description'>
+                <div class="col-sm-4" id='img-container'><img id='img' /></div>
+
+                <div class="col-sm-8" id='description-container'>
+                    <p id="description"></p>
                 </div>
             </div>
 
-            <div class="col-sm-4"></div>
+            <div id='stats'>
+                <p id="hp"></p>
+                <p id="atk"></p>
+                <p id="def"></p>
+                <p id="abil"></p>
+            </div>
         </div>
 
         <div id='bottom' class="row">
@@ -46,7 +79,7 @@
                 </div>
     
                 <div class="col-sm-4 corner"></div>
-            </div>
+        </div>
     </div>
     
     <!-- Axios library -->
@@ -56,6 +89,11 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='./components/global.js'></script>
+    <script src='./components/classes.js'></script>
+    <script src='./components/select.js'></script>
+    <script src='./components/start.js'></script>
+    <script src='./components/search.js'></script>
     <script src="script.js"></script>
 </body>
 </html>

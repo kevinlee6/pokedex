@@ -1,6 +1,7 @@
 #middle {
     height: 68%;
-    background-color: lightblue;
+    background-color: $middle-color;
     max-width: 550px;
     width: 100%;
+    overflow: auto;
 }
