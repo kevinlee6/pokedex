@@ -25,7 +25,7 @@
             <div class="col-sm-4 corner"></div>
 
             <div class="col-sm-4" id='half-circle-top'>
-                <div class='smaller-half-circle'>
+                <div id='pokemon-master' class='smaller-half-circle'>
 
                 </div>
             </div>
@@ -62,10 +62,19 @@
             </div>
 
             <div id='stats'>
-                <p id="hp"></p>
-                <p id="atk"></p>
-                <p id="def"></p>
-                <p id="abil"></p>
+                <div id='hp-container'>
+                    <p id="hp"></p>
+                </div>
+                <div id="atk-container">
+                    <p id="atk"></p>
+                </div>
+                <div id="def-container">
+                    <p id="def"></p>
+                </div>
+                <div id="abil-container">
+                    <span>ABILITIES</span>
+                    <p id="abil"></p>
+                </div>
             </div>
         </div>
 
@@ -95,5 +104,6 @@
     <script src='./components/start.js'></script>
     <script src='./components/search.js'></script>
     <script src="script.js"></script>
+    <script src='./components/easteregg.js'></script>
 </body>
 </html>

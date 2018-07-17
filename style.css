@@ -6,13 +6,30 @@
 @media screen and (max-width: 400px) {
   #id-and-name {
     font-size: 0.9em;
-    white-space: nowrap;
   }
   #type {
     font-size: 0.9em;
   }
   #stats {
     font-size: 0.8em;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -147,7 +164,8 @@
 
 #middle {
   height: 68%;
-  background-color: rgba(173, 216, 230, 0.96);
+  background-color: rgba(173, 216, 230, 0.94);
+  border-left: 6px solid #75cbe6;
   max-width: 550px;
   width: 100%;
   overflow: auto;
@@ -248,6 +266,7 @@
 }
 
 #img-and-description #description-container #description {
+  margin-top: 3px;
   font-family: 'pokemon';
   font-size: 0.9em;
 }
@@ -257,25 +276,59 @@
   margin: 2% 4%;
 }
 
-#stats #hp {
-  background: #fa3030;
+#stats #hp-container {
+  background: #f87171;
+  border-radius: 10px;
+}
+
+#stats #hp-container #hp {
+  background: red;
+  white-space: nowrap;
   border-radius: 15px;
-  width: 36%;
   padding: 5px 10px 5px 15px;
 }
 
-#stats #atk {
+#stats #atk-container {
+  background: darkorange;
+  border-radius: 10px;
+}
+
+#stats #atk-container #atk {
+  white-space: nowrap;
   background: #d37000;
   border-radius: 15px;
-  width: 36%;
   padding: 5px 10px 5px 15px;
 }
 
-#stats #def {
+#stats #def-container {
   background: #e6e665;
+  border-radius: 10px;
+}
+
+#stats #def-container #def {
+  white-space: nowrap;
+  border-radius: 10px;
+  background: gold;
   border-radius: 15px;
-  width: 36%;
   padding: 5px 10px 5px 15px;
+}
+
+#stats #abil-container {
+  width: 100%;
+  background-color: lightseagreen;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+
+#stats #abil-container span {
+  text-decoration: underline;
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+#stats #abil-container #abil {
+  margin-top: 3px;
+  margin-left: 10px;
 }
 
 html {
@@ -291,5 +344,9 @@ body {
 
 .hidden {
   display: none;
+}
+
+.master-ball {
+  background: #7e308e !important;
 }
 /*# sourceMappingURL=style.css.map */

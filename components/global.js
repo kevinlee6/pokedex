@@ -1,17 +1,22 @@
 function changeData(pokemon) {
     idAndName.textContent = `${pokemon.id} · ${pokemon.name.toUpperCase()}`;
 
-    type.textContent = pokemon.type.map(x=>x.toUpperCase()).join('/');
+    type.textContent = pokemon.type.map(x=>x.toUpperCase()).join(' / ');
 
     img.setAttribute('src', pokemon.photo);
 
     description.textContent = pokemon.description;
 
     hp.textContent = `HP: ${pokemon.hp}`;
+    hp.style.width = `${pokemon.hp / 2.55}%`;
 
     atk.textContent = `ATTACK: ${pokemon.atk}`;
+    atk.style.width = `${pokemon.atk / 1.9}%`;
 
     def.textContent = `DEFENSE: ${pokemon.def}`;
+    def.style.width = `${pokemon.def / 2.3}%`;
+
+    abil.textContent = `${pokemon.abil.map(x=>x.toUpperCase()).join(' | ')}`;
 };
 
 function addPokemon(pID, data) {
@@ -26,8 +31,19 @@ function addPokemon(pID, data) {
     trainer.add(pokemon);
 
     axios.get(`https://www.pokeapi.co/api/v2/pokemon-species/${pID}/`).then(response => {
-        const data2 = response.data;
+        const data2 = response.data.flavor_text_entries;
+        let i = 0;
 
-        pokemon.description = data2.flavor_text_entries[2].flavor_text;
+        for (i; i < data2.length; i++) {
+            if (data2[i].language.name === 'en') {
+                break;
+            }
+        }
+
+        if (i === data2.length) {
+            pokemon.description = 'There is no description available for this Pokémon.'
+        } else {
+        pokemon.description = data2[i].flavor_text;
+        }
     }).then(() => changeData(trainer.get(pokemon.name)));
 }
