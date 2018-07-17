@@ -11,11 +11,9 @@ function changeData(pokemon) {
     setTypeCSS(type1);
 
     if (pokemon.type[1]){
-        typeConditional.textContent = '/';
         type2.textContent = pokemon.type[1].toUpperCase();
         setTypeCSS(type2);
     } else {
-        typeConditional.textContent = '';
         type2.textContent = '';
         type2.classList.remove(type2.classList[0]);
     }

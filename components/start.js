@@ -8,7 +8,6 @@ const img = document.getElementById('img'),
       id = document.getElementById('id'),
       name = document.getElementById('name');
       type1 = document.getElementById('type1'),
-      typeConditional = document.getElementById('type-conditional'),
       type2 = document.getElementById('type2'),
       hp = document.getElementById('hp'),
       atk = document.getElementById('atk'),
