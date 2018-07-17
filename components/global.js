@@ -1,11 +1,24 @@
-function changeData(pokemon) {
-    // idAndName.textContent = `${pokemon.id} · ${pokemon.name.toUpperCase()}`;
+// Dynamic content globals (getElementById) located in start.js
 
+// Functions in this file: changeData, addPokemon, and setTypeCSS
+
+function changeData(pokemon) {
     id.textContent = pokemon.id;
 
     name.textContent = pokemon.name.toUpperCase();
 
-    type.textContent = pokemon.type.map(x=>x.toUpperCase()).join(' / ');
+    type1.textContent = pokemon.type[0].toUpperCase();
+    setTypeCSS(type1);
+
+    if (pokemon.type[1]){
+        typeConditional.textContent = '/';
+        type2.textContent = pokemon.type[1].toUpperCase();
+        setTypeCSS(type2);
+    } else {
+        typeConditional.textContent = '';
+        type2.textContent = '';
+        type2.classList.remove(type2.classList[0]);
+    }
 
     img.setAttribute('src', pokemon.photo);
 
@@ -50,4 +63,66 @@ function addPokemon(pID, data) {
         pokemon.description = data2[i].flavor_text;
         }
     }).then(() => changeData(trainer.get(pokemon.name)));
+}
+
+function setTypeCSS(type) {
+    let typeClass = type.classList;
+    typeClass.remove(typeClass[0]);
+
+    switch (type.textContent) {
+        case ('NORMAL'):
+            typeClass.add('normal');
+            break;
+        case ('FIGHTING'):
+            typeClass.add('fighting');
+            break;
+        case ('FLYING'):
+            typeClass.add('flying');
+            break;
+        case ('POISON'):
+            typeClass.add('poison');
+            break;
+        case ('GROUND'):
+            typeClass.add('ground');
+            break;
+        case ('ROCK'):
+            typeClass.add('rock');
+            break;
+        case ('BUG'):
+            typeClass.add('bug');
+            break;
+        case ('GHOST'):
+            typeClass.add('ghost');
+            break;
+        case ('STEEL'):
+            typeClass.add('steel');
+            break;
+        case ('FIRE'):
+            typeClass.add('fire');
+            break;
+        case ('WATER'):
+            typeClass.add('water');
+            break;
+        case ('GRASS'):
+            typeClass.add('grass');
+            break;
+        case ('ELECTRIC'):
+            typeClass.add('electric');
+            break;
+        case ('PSYCHIC'):
+            typeClass.add('psychic');
+            break;
+        case ('ICE'):
+            typeClass.add('ice');
+            break;
+        case ('DRAGON'):
+            typeClass.add('dragon');
+            break;
+        case ('DARK'):
+            typeClass.add('dark');
+            break;
+        case ('FAIRY'):
+            typeClass.add('fairy');
+            break;
+    }
 }

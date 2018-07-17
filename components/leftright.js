@@ -31,3 +31,8 @@ right.addEventListener('click', e => {
     if (++counter >= arr.length) counter = 0;
     changeData(arr[counter]);
 })
+
+window.addEventListener('keydown', e => {
+    if (e.keyCode === 37) left.click();
+    else if (e.keyCode === 39) right.click();
+});

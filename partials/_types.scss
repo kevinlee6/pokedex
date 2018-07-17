@@ -1,0 +1,78 @@
+@mixin types($color) {
+    background-color: $color;
+    color: #ddd;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.normal {
+    @include types(#A8A878);
+}
+
+.fighting {
+    @include types(#C03028);
+}
+
+.flying {
+    @include types(#A890F0);
+}
+
+.poison {
+    @include types(#A040A0);
+}
+
+.ground {
+    @include types(#E0C068);
+}
+
+.rock {
+    @include types(#B8A038);
+}
+
+.bug {
+    @include types(#A8B820);
+}
+
+.ghost {
+    @include types(#705898);
+}
+
+.steel {
+    @include types(#B8B8D0);
+}
+
+.fire {
+    @include types(#F08030);
+}
+
+.water {
+    @include types(#6890F0);
+}
+
+.grass {
+    @include types(#78C850);
+}
+
+.electric {
+    @include types(#F8D030);
+}
+
+.psychic {
+    @include types(#F85888);
+}
+
+.ice {
+    @include types(#98D8D8);
+}
+
+.dragon {
+    @include types(#7038F8);
+}
+
+.dark {
+    @include types(#705848);
+}
+
+.fairy {
+    @include types(#EE99AC);
+}
