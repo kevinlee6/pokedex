@@ -37,8 +37,8 @@
             <!-- TO DO: add hidden class later for animations stuff -->
             <div id='search' class="row">
                 <select name="select" id="select">
-                        <option value="name">NAME</option>
-                        <option value="id">ID</option>
+                        <option id='select-name' value="name">NAME</option>
+                        <option id='select-id' value="id">ID</option>
                     </select>
 
                 <form>
@@ -59,6 +59,13 @@
                 <div class="col-sm-8" id='description-container'>
                     <p id="description"></p>
                 </div>
+            </div>
+
+            <div id='stats'>
+                <p id="hp"></p>
+                <p id="atk"></p>
+                <p id="def"></p>
+                <p id="abil"></p>
             </div>
         </div>
 
@@ -84,6 +91,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src='./components/global.js'></script>
     <script src='./components/classes.js'></script>
+    <script src='./components/select.js'></script>
     <script src='./components/start.js'></script>
     <script src='./components/search.js'></script>
     <script src="script.js"></script>

@@ -1,24 +1,21 @@
-const searchBtn = document.getElementById('search-btn'),
-      inputName = document.getElementById('input-name'),
-      inputId = document.getElementById('input-id');
+const searchBtn = document.getElementById('search-btn');
       
 searchBtn.addEventListener('click', e => {
     e.preventDefault();
-    let target;
 
     if (inputName.value.length) {
-        if (trainer.get(inputName.value.toLowerCase())) {
-            target = trainer.get(inputName.value.toLowerCase());
+        let target = trainer.get(inputName.value.toLowerCase());
+        if (target) {
             changeData(target);
         } else {
-            alert('This Pokémon is not avilable in this Pokédex yet!')
+            alert('This Pokémon is not avilable in this Pokédex!')
         }
     } else {
-        let name = trainer.idToName[inputId.value];
-        if (name) {
-            changeData(name);
+        let pokemonName = trainer.idToName[inputId.value];
+        if (pokemonName) {
+            changeData(trainer.get(pokemonName));
         } else {
-            alert('This ID is not available in this Pokédex yet!');
+            alert('This ID is not available in this Pokédex!');
         }
     }
 })

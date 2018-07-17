@@ -2,10 +2,15 @@ const startBtn = document.getElementById('start-btn'),
       startName = document.getElementById('start-name'),
       start = document.getElementById('start');
 
+// Divs involved with dynamic content
 const img = document.getElementById('img'),
       description = document.getElementById('description'),
       idAndName = document.getElementById('id-and-name'),
-      type = document.getElementById('type');
+      type = document.getElementById('type'),
+      hp = document.getElementById('hp'),
+      atk = document.getElementById('atk'),
+      def = document.getElementById('def'),
+      abil = document.getElementById('abil');
 
 let trainer;
 
@@ -23,19 +28,7 @@ startBtn.addEventListener('click', e => {
                 const data = response.data;
                 console.log(data);
     
-                // Instantiate Pokemons object to be added to Pokedex
-                const pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.types.map(x=>x.type.name), data.sprites.front_default);
-    
-                // Add Pokemon to Pokedex
-                trainer.add(pokemon);
-
-                axios.get(`https://www.pokeapi.co/api/v2/pokemon-species/${id}/`).then(response => {
-                    const data = response.data;
-
-                    pokemon.description = data.flavor_text_entries[2].flavor_text;
-
-                    changeData(trainer.get('arcanine'));
-                });
+                addPokemon(id, data);
             });
     });
 

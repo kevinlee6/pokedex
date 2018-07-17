@@ -1,0 +1,25 @@
+#stats {
+    font-family: 'pokemon';
+    margin: 2% 4%;
+
+    #hp {
+        background: $hp-color;
+        border-radius: 15px;
+        width: 36%;
+        padding: 5px 10px 5px 15px;
+    }
+
+    #atk {
+        background: $atk-color;
+        border-radius: 15px;
+        width: 36%;
+        padding: 5px 10px 5px 15px;
+    }
+
+    #def {
+        background: $def-color;
+        border-radius: 15px;
+        width: 36%;
+        padding: 5px 10px 5px 15px;
+    }
+}

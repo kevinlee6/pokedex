@@ -11,6 +11,9 @@
   #type {
     font-size: 0.9em;
   }
+  #stats {
+    font-size: 0.8em;
+  }
 }
 
 #start {
@@ -147,6 +150,7 @@
   background-color: rgba(173, 216, 230, 0.96);
   max-width: 550px;
   width: 100%;
+  overflow: auto;
 }
 
 #search {
@@ -246,6 +250,32 @@
 #img-and-description #description-container #description {
   font-family: 'pokemon';
   font-size: 0.9em;
+}
+
+#stats {
+  font-family: 'pokemon';
+  margin: 2% 4%;
+}
+
+#stats #hp {
+  background: #fa3030;
+  border-radius: 15px;
+  width: 36%;
+  padding: 5px 10px 5px 15px;
+}
+
+#stats #atk {
+  background: #d37000;
+  border-radius: 15px;
+  width: 36%;
+  padding: 5px 10px 5px 15px;
+}
+
+#stats #def {
+  background: #e6e665;
+  border-radius: 15px;
+  width: 36%;
+  padding: 5px 10px 5px 15px;
 }
 
 html {

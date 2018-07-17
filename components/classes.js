@@ -8,7 +8,6 @@ class Pokemon {
         this.abil = abil;
         this.type = type;
         this.photo = photo;
-
         this.description = '';
     }
 }
