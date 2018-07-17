@@ -1,5 +1,9 @@
 function changeData(pokemon) {
-    idAndName.textContent = `${pokemon.id} · ${pokemon.name.toUpperCase()}`;
+    // idAndName.textContent = `${pokemon.id} · ${pokemon.name.toUpperCase()}`;
+
+    id.textContent = pokemon.id;
+
+    name.textContent = pokemon.name.toUpperCase();
 
     type.textContent = pokemon.type.map(x=>x.toUpperCase()).join(' / ');
 

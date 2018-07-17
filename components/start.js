@@ -5,7 +5,8 @@ const startBtn = document.getElementById('start-btn'),
 // Divs involved with dynamic content
 const img = document.getElementById('img'),
       description = document.getElementById('description'),
-      idAndName = document.getElementById('id-and-name'),
+      id = document.getElementById('id'),
+      name = document.getElementById('name');
       type = document.getElementById('type'),
       hp = document.getElementById('hp'),
       atk = document.getElementById('atk'),

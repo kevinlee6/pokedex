@@ -37,9 +37,9 @@
             <!-- TO DO: add hidden class later for animations stuff -->
             <div id='search' class="row">
                 <select name="select" id="select">
-                        <option id='select-name' value="name">NAME</option>
-                        <option id='select-id' value="id">ID</option>
-                    </select>
+                    <option id='select-name' value="name">NAME</option>
+                    <option id='select-id' value="id">ID</option>
+                </select>
 
                 <form>
                     <input type="text" id='input-name' placeholder="ENTER NAME"/>
@@ -49,7 +49,9 @@
             </div>
 
             <div id='id-name-type-container'>
-                <p id="id-and-name"></p>
+                <p id="id-and-name">
+                    <span id='id'></span> · <span id='name'></span>
+                </p>
                 <p id="type"></p>
             </div>
 
@@ -79,7 +81,9 @@
         </div>
 
         <div id='bottom' class="row">
-                <div class="col-sm-4 corner"></div>
+                <div class="col-sm-4" id='left-container'>
+                    <span id='left' class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                </div>
     
                 <div class="col-sm-4" id='half-circle-bottom'>
                     <div class='smaller-half-circle'>
@@ -87,7 +91,9 @@
                     </div>
                 </div>
     
-                <div class="col-sm-4 corner"></div>
+                <div class="col-sm-4" id='right-container'>
+                    <span id='right' class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                </div>
         </div>
     </div>
     
@@ -105,5 +111,6 @@
     <script src='./components/search.js'></script>
     <script src="script.js"></script>
     <script src='./components/easteregg.js'></script>
+    <script src='./components/leftright.js'></script>
 </body>
 </html>
