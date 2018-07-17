@@ -2,24 +2,58 @@
     font-family: 'pokemon';
     margin: 2% 4%;
 
-    #hp {
+    #hp-container {
         background: $hp-color;
-        border-radius: 15px;
-        width: 36%;
-        padding: 5px 10px 5px 15px;
+        border-radius: 10px;
+
+        #hp {
+            background: red;
+            white-space: nowrap;
+            border-radius: 15px;
+            padding: 5px 10px 5px 15px;
+        }
     }
 
-    #atk {
-        background: $atk-color;
-        border-radius: 15px;
-        width: 36%;
-        padding: 5px 10px 5px 15px;
+    #atk-container {
+        background: darkorange;
+        border-radius: 10px;
+
+        #atk {
+            white-space: nowrap;
+            background: $atk-color;
+            border-radius: 15px;
+            padding: 5px 10px 5px 15px;
+        }
     }
 
-    #def {
+    #def-container {
         background: $def-color;
-        border-radius: 15px;
-        width: 36%;
-        padding: 5px 10px 5px 15px;
+        border-radius: 10px;
+
+        #def {
+            white-space: nowrap;
+            border-radius: 10px;
+            background: gold;
+            border-radius: 15px;
+            padding: 5px 10px 5px 15px;
+        }
+    }
+
+    #abil-container {
+        width: 100%;
+        background-color: lightseagreen;
+        border-radius: 10px;
+        padding-top: 5px;
+
+        span {
+            text-decoration: underline;
+            margin-left: 10px;
+            margin-bottom: 3px;
+        }
+
+        #abil {
+            margin-top: 3px;
+            margin-left: 10px;
+        }
     }
 }
