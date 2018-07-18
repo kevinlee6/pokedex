@@ -13,7 +13,8 @@ function setCounter(arr) {
 }
 
 left.addEventListener('click', e => {
-    if (!trainer) return;
+    if (!trainer || document.activeElement === inputName) return;
+
     // set the counter
     const arr = trainer.all();
     setCounter(arr);
@@ -23,7 +24,8 @@ left.addEventListener('click', e => {
 })
 
 right.addEventListener('click', e => {
-    if (!trainer) return;
+    if (!trainer || document.activeElement === inputName) return;
+
     // set the counter
     const arr = trainer.all();
     setCounter(arr);
