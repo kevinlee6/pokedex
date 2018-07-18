@@ -46,3 +46,24 @@ body {
 .master-ball {
     background: #7e308e !important;
 }
+
+.master-ball:before, .master-ball:after {
+  content: '';
+  height: 40px;
+  width: 28px;
+  background: rgb(224, 42, 130);
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  top: 3%;
+}
+
+.master-ball:before {
+  left: 3%;
+  transform: rotate(-130deg);
+}
+
+.master-ball:after {
+  right: 3%;
+  transform: rotate(130deg);
+}
