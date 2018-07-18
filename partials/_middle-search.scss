@@ -1,6 +1,6 @@
 #search {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 3% 0;
     font-family: 'pokemon';
@@ -16,11 +16,13 @@
     }
 
     form {           
+        display: flex;
+        justify-content: space-evenly;
         width: 70%;
 
         input {
             padding: 5px;
-            width: 63%;
+            width: 55%;
         }
 
         #search-btn {

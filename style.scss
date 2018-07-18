@@ -4,6 +4,7 @@
 }
 @import './partials/media-queries';
 @import './partials/animations';
+@import './partials/types';
 @import './partials/start';
 @import './partials/variables';
 @import './partials/pokedex';
@@ -14,6 +15,7 @@
 @import './partials/id-name-type';
 @import './partials/img-and-description';
 @import './partials/stats.scss';
+@import './partials/leftright.scss';
 
 html {
     height: 100%;
@@ -28,6 +30,17 @@ body {
 
 .hidden {
     display: none;
+}
+
+.loading {
+    width: 33% !important;
+    pointer-events: none;
+    background: grey !important;
+    color: white;
+
+    &:hover {
+        background: grey !important;
+    }
 }
 
 .master-ball {

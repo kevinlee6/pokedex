@@ -3,11 +3,16 @@
         font-size: 0.9em;
     }
 
-    #type {
-        font-size: 0.9em;
+    #types {
+        font-size: 0.7em;
     }
 
     #stats {
         font-size: 0.8em;
+    }
+
+    .loading {
+        min-width: 120px;
+        margin-left: 5px;
     }
 }

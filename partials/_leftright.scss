@@ -1,0 +1,19 @@
+.glyphicon {
+    font-size: 5em;
+
+    &:hover{
+        color: white;
+    }
+}
+
+#left-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#right-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

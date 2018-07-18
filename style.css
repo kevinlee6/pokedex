@@ -7,11 +7,15 @@
   #id-and-name {
     font-size: 0.9em;
   }
-  #type {
-    font-size: 0.9em;
+  #types {
+    font-size: 0.7em;
   }
   #stats {
     font-size: 0.8em;
+  }
+  .loading {
+    min-width: 120px;
+    margin-left: 5px;
   }
 }
 
@@ -31,6 +35,340 @@
   100% {
     opacity: 0;
   }
+}
+
+.fadeout {
+  -webkit-animation: fadeout 1s ease-out forwards;
+          animation: fadeout 1s ease-out forwards;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadein {
+  -webkit-animation: fadein 2s ease-in forwards;
+          animation: fadein 2s ease-in forwards;
+}
+
+@-webkit-keyframes open {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 68%;
+  }
+}
+
+@keyframes open {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 68%;
+  }
+}
+
+.open {
+  -webkit-animation: open 1.5s ease-out forwards;
+          animation: open 1.5s ease-out forwards;
+}
+
+@-webkit-keyframes close {
+  0% {
+    height: 68%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes close {
+  0% {
+    height: 68%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+.close {
+  -webkit-animation: close 0.6s ease-in forwards;
+          animation: close 0.6s ease-in forwards;
+}
+
+@-webkit-keyframes wobble-more {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(-12%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-12%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    -webkit-transform: translate3d(-7%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-7%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    -webkit-transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    -webkit-transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes wobble-more {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(-12%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-12%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    -webkit-transform: translate3d(-7%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-7%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    -webkit-transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    -webkit-transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.wobble-more {
+  -webkit-animation: wobble-more 1s;
+          animation: wobble-more 1s;
+}
+
+@-webkit-keyframes wobble-less {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    -webkit-transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    -webkit-transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    -webkit-transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    -webkit-transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes wobble-less {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    -webkit-transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(5%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    -webkit-transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    -webkit-transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    -webkit-transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.wobble-less {
+  -webkit-animation: wobble-less 1s;
+          animation: wobble-less 1s;
+}
+
+.normal {
+  background-color: #A8A878;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.fighting {
+  background-color: #C03028;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.flying {
+  background-color: #A890F0;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.poison {
+  background-color: #A040A0;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.ground {
+  background-color: #E0C068;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.rock {
+  background-color: #B8A038;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.bug {
+  background-color: #A8B820;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.ghost {
+  background-color: #705898;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.steel {
+  background-color: #B8B8D0;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.fire {
+  background-color: #F08030;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.water {
+  background-color: #6890F0;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.grass {
+  background-color: #78C850;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.electric {
+  background-color: #F8D030;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.psychic {
+  background-color: #F85888;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.ice {
+  background-color: #98D8D8;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.dragon {
+  background-color: #7038F8;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.dark {
+  background-color: #705848;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.fairy {
+  background-color: #EE99AC;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
 }
 
 #start {
@@ -71,22 +409,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
 }
 
 #top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
   max-width: 550px;
   height: 16%;
@@ -98,7 +432,38 @@
   border-bottom: 1px solid #000086;
 }
 
+#top #top-left {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
+  white-space: nowrap;
+  color: palegoldenrod;
+}
+
+#top #power-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#top #power-container #power {
+  color: palegoldenrod;
+  font-size: 4.6em;
+}
+
+#top #power-container #power:hover {
+  color: white;
+}
+
 #top #half-circle-top {
+  position: relative;
+  z-index: 1;
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 100px;
@@ -111,8 +476,6 @@
 }
 
 #top .smaller-half-circle {
-  position: relative;
-  z-index: 1;
   margin: 57% auto 0 auto;
   width: 22px;
   height: 22px;
@@ -175,9 +538,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -196,12 +559,18 @@
 }
 
 #search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 70%;
 }
 
 #search form input {
   padding: 5px;
-  width: 63%;
+  width: 55%;
 }
 
 #search form #search-btn {
@@ -234,6 +603,7 @@
           justify-content: space-between;
   margin: 0 auto;
   font-family: 'pokemon';
+  white-space: nowrap;
 }
 
 #img-and-description {
@@ -331,6 +701,38 @@
   margin-left: 10px;
 }
 
+.glyphicon {
+  font-size: 5em;
+}
+
+.glyphicon:hover {
+  color: white;
+}
+
+#left-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#right-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 html {
   height: 100%;
 }
@@ -344,6 +746,17 @@ body {
 
 .hidden {
   display: none;
+}
+
+.loading {
+  width: 33% !important;
+  pointer-events: none;
+  background: grey !important;
+  color: white;
+}
+
+.loading:hover {
+  background: grey !important;
 }
 
 .master-ball {
