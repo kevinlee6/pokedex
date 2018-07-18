@@ -27,11 +27,7 @@ searchBtn.addEventListener('click', e => {
                 changeData(target);
                 alert('You already have this Pokémon!');
             } else {
-                axios.get(`https://www.pokeapi.co/api/v2/pokemon/${input}`).then(response => {
-                    const data = response.data;
-
-                    addPokemon(data.id, data);
-                }).catch(error => alert('There is no such Pokémon! Or there is a network error.'));
+                addPokemon(input);
             }
         } else {
             let pokemonName = trainer.idToName[inputId.value];        
@@ -40,11 +36,7 @@ searchBtn.addEventListener('click', e => {
                 alert('You already have this Pokémon!');
             } else {
                 let input = inputId.value;
-                axios.get(`https://www.pokeapi.co/api/v2/pokemon/${input}`).then(response => {
-                    const data = response.data;
-
-                    addPokemon(data.id, data);
-                }).catch(error => alert('There is no such Pokémon! Or there is a network error.'));
+                addPokemon(input);
             }
         }   
     }

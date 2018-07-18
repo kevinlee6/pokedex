@@ -56,33 +56,38 @@ function changeData(pokemon) {
     abil.textContent = `${pokemon.abil.map(x=>x.toUpperCase()).join(' | ')}`;
 };
 
-function addPokemon(pID, data) {
+function addPokemon(pNameOrInput) {
     // Not the same as Trainer.add function
     // Dynamically adds Pokemon to Pokedex/Trainer Obj from API
-    // pID is pokemon ID and data is response.data from parent ajax call
+    let pokemon;
+    axios.get(`https://www.pokeapi.co/api/v2/pokemon/${pNameOrInput}`)
+          .then(response => {
+                const data = response.data;
+                // Instantiate Pokemons object to be added to Pokedex
+                pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.types.map(x=>x.type.name), data.sprites.front_default);
+            
+                // Add Pokemon to Pokedex
+                trainer.add(pokemon);
+        }).then(() => {
+            // Get pokemon description
+            axios.get(`https://www.pokeapi.co/api/v2/pokemon-species/${pNameOrInput}/`)
+                 .then(response => {
+                    const data2 = response.data.flavor_text_entries;
+                    let i = 0;
 
-    // Instantiate Pokemons object to be added to Pokedex
-    const pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.types.map(x=>x.type.name), data.sprites.front_default);
-    
-    // Add Pokemon to Pokedex
-    trainer.add(pokemon);
+                    for (i; i < data2.length; i++) {
+                        if (data2[i].language.name === 'en') {
+                            break;
+                        }
+                    }
 
-    axios.get(`https://www.pokeapi.co/api/v2/pokemon-species/${pID}/`).then(response => {
-        const data2 = response.data.flavor_text_entries;
-        let i = 0;
-
-        for (i; i < data2.length; i++) {
-            if (data2[i].language.name === 'en') {
-                break;
-            }
-        }
-
-        if (i === data2.length) {
-            pokemon.description = 'There is no description available for this Pokémon.'
-        } else {
-        pokemon.description = data2[i].flavor_text;
-        }
-    }).then(() => changeData(trainer.get(pokemon.name)));
+                    if (i === data2.length) {
+                        pokemon.description = 'There is no description available for this Pokémon.'
+                    } else {
+                        pokemon.description = data2[i].flavor_text;
+                    }
+                }).then(() => changeData(trainer.get(pokemon.name)));
+        }).catch(error => alert('There is no such Pokémon! Or there is a network error.'));
 }
 
 function setTypeCSS(type) {

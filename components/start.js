@@ -70,11 +70,6 @@ startBtn.addEventListener('click', e => {
 
     // Add starter pokemon to trainer
     myPokemonIds.forEach(id => {
-        axios.get(`https://www.pokeapi.co/api/v2/pokemon/${id}`).then(response => {
-                const data = response.data;
-    
-                addPokemon(id, data);
-            });
+        addPokemon(id);
     });
-
 })
