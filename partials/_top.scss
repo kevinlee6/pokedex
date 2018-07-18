@@ -1,4 +1,6 @@
 #top {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -39,7 +41,6 @@
 
     #half-circle-top {
         position: absolute;
-        z-index: 1;
         align-self: flex-end;
         width: 100px;
         height: 50px;

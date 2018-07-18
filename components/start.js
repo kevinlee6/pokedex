@@ -63,8 +63,6 @@ startBtn.addEventListener('click', e => {
         powerContainer.classList.remove('fadein');
     }, 9500);
 
-
-
     // Starter pokemon
     const myPokemonIds = ['59', '130', '149'];
 
