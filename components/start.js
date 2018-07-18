@@ -72,4 +72,4 @@ startBtn.addEventListener('click', e => {
     myPokemonIds.forEach(id => {
         addPokemon(id);
     });
-})
+});

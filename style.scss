@@ -32,6 +32,17 @@ body {
     display: none;
 }
 
+.loading {
+    width: 33% !important;
+    pointer-events: none;
+    background: grey !important;
+    color: white;
+
+    &:hover {
+        background: grey !important;
+    }
+}
+
 .master-ball {
     background: #7e308e !important;
 }
