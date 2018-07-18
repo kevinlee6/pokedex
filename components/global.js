@@ -1,7 +1,29 @@
-// Dynamic content globals (getElementById) located in start.js
+// Content specific to a component will be located in its respective component
+
+// Dynamic content; might not be full list
+const img = document.getElementById('img'),
+      description = document.getElementById('description'),
+      id = document.getElementById('id'),
+      name = document.getElementById('name');
+      type1 = document.getElementById('type1'),
+      type2 = document.getElementById('type2'),
+      hp = document.getElementById('hp'),
+      atk = document.getElementById('atk'),
+      def = document.getElementById('def'),
+      abil = document.getElementById('abil');
+
+// Static content; might not be full list
+const startBtn = document.getElementById('start-btn'),
+      startName = document.getElementById('start-name'),
+      start = document.getElementById('start'),
+      topLeft = document.getElementById('top-left'),
+      powerContainer = document.getElementById('power-container'),
+      middle = document.getElementById('middle'),
+      pokedex = document.getElementById('pokedex'),
+      topBall = document.getElementById('half-circle-top'),
+      bottomBall = document.getElementById('half-circle-bottom');
 
 // Functions in this file: changeData, addPokemon, and setTypeCSS
-
 function changeData(pokemon) {
     id.textContent = pokemon.id;
 

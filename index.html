@@ -21,9 +21,9 @@
         </form>
     </div>
 
-    <div id='pokedex'>
+    <div id='pokedex' style="justify-content:center;">
         <div id='top' class="row">
-            <div class="col-sm-4 corner"></div>
+            <div id='top-left' class="col-sm-4 hidden"></div>
 
             <div class="col-sm-4" id='half-circle-top'>
                 <div id='pokemon-master' class='smaller-half-circle'>
@@ -31,11 +31,12 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 corner"></div>
+            <div id='power-container' class="col-sm-4 hidden">
+                <span id='power' class='glyphicon glyphicon-off' aria-hidden="true"></span>
+            </div>
         </div>
 
         <div id='middle' class='row hidden'> 
-            <!-- TO DO: add hidden class later for animations stuff -->
             <div id='search' class="row">
                 <select name="select" id="select">
                     <option id='select-name' value="name">NAME</option>
@@ -53,7 +54,7 @@
                 <p id="id-and-name">
                     <span id='id'></span> · <span id='name'></span>
                 </p>
-                <p id="types"><span id=type2></span><span id='type1'></span></p>
+                <p id="types"><span id=type2></span> <span id='type1'></span></p>
             </div>
 
             <div class='row' id='img-and-description'>
@@ -113,5 +114,6 @@
     <script src="script.js"></script>
     <script src='./components/easteregg.js'></script>
     <script src='./components/leftright.js'></script>
+    <script src="./components/power.js"></script>
 </body>
 </html>
