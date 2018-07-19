@@ -34,78 +34,83 @@
             </div>
         </div>
 
-        <div id='middle' class='row hidden'> 
-            <div id='search' class="row">
-                <select name="select" id="select">
-                    <option id='select-name' value="name">NAME</option>
-                    <option id='select-id' value="id">ID</option>
-                </select>
+        <div id='middle' class='row hidden'>
+            <div id="main-display">
+                <div id='search' class="row">
+                    <select name="select" id="select">
+                        <option id='select-name' value="name">NAME</option>
+                        <option id='select-id' value="id">ID</option>
+                    </select>
 
-                <form>
-                    <input type="text" id='input-name' placeholder="ENTER NAME"/>
-                    <input type="text" id='input-id' class='hidden' placeholder="ENTER ID" />
-                    <input type='submit' value='FIND' id='search-btn' />
-                </form>
-            </div>
-
-            <div id='id-name-type-container'>
-                <p id="id-and-name">
-                    <span id='id'></span> · <span id='name'></span>
-                </p>
-                <p id="types"><span id=type2></span> <span id='type1'></span></p>
-            </div>
-
-            <div class='row' id='img-and-description'>
-                <div class="col-sm-4" id='img-container'><img id='img' /></div>
-
-                <div class="col-sm-8" id='description-container'>
-                    <p id="description"></p>
-                </div>
-            </div>
-
-            <div id='stats'>
-                <div id='hp-container'>
-                    <p id="hp"></p>
-                </div>
-                <div id="atk-container">
-                    <p id="atk"></p>
-                </div>
-                <div id="def-container">
-                    <p id="def"></p>
-                </div>
-                <div id="abil-container">
-                    <span>ABILITIES</span>
-                    <p id="abil"></p>
+                    <form>
+                        <input type="text" id='input-name' placeholder="ENTER NAME"/>
+                        <input type="text" id='input-id' class='hidden' placeholder="ENTER ID" />
+                        <input type='submit' value='FIND' id='search-btn' />
+                    </form>
                 </div>
 
-                <div id='moves-height-weight'>
-                    <div id='moves-container'>
-                        <button id='moves-btn'>
-                            <p>M</p>
-                            <p>O</p>
-                            <p>V</p>
-                            <p>E</p>
-                            <p>S</p>
-                        </button>
-                        <ul id='moves'>
+                <div id='id-name-type-container'>
+                    <p id="id-and-name">
+                        <span id='id'></span> · <span id='name'></span>
+                    </p>
+                    <p id="types"><span id=type2></span> <span id='type1'></span></p>
+                </div>
 
-                        </ul>
-                    </div>
+                <div class='row' id='img-and-description'>
+                    <div class="col-sm-4" id='img-container'><img id='img' /></div>
 
-                    <div id='height-weight'>
-                        <p id="height-container">
-                            HEIGHT:
-                            <br />
-                            <span id='height'></span>
-                        </p>
-                        <p id="weight-container">
-                            WEIGHT:
-                            <br />
-                            <span id="weight"></span>
-                        </p>
+                    <div class="col-sm-8" id='description-container'>
+                        <p id="description"></p>
                     </div>
                 </div>
 
+                <div id='stats'>
+                    <div id='hp-container'>
+                        <p id="hp"></p>
+                    </div>
+                    <div id="atk-container">
+                        <p id="atk"></p>
+                    </div>
+                    <div id="def-container">
+                        <p id="def"></p>
+                    </div>
+                    <div id="abil-container">
+                        <span>ABILITIES</span>
+                        <p id="abil"></p>
+                    </div>
+
+                    <div id='moves-height-weight'>
+                        <div id='moves-container'>
+                            <button id='moves-btn'>
+                                <p>M</p>
+                                <p>O</p>
+                                <p>V</p>
+                                <p>E</p>
+                                <p>S</p>
+                            </button>
+                            <div id='moves'>
+
+                            </div>
+                        </div>
+
+                        <div id='height-weight'>
+                            <p id="height-container">
+                                HEIGHT:
+                                <br />
+                                <span id='height'></span>
+                            </p>
+                            <p id="weight-container">
+                                WEIGHT:
+                                <br />
+                                <span id="weight"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='pokemon-list' class='hidden'>
+                <button id='filter-btn'>FILTER</button>
             </div>
         </div>
 
@@ -113,13 +118,19 @@
                 <div class="col-sm-4" id='left-container'>
                     <span id='left' class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
                 </div>
-    
-                <div class="col-sm-4" id='half-circle-bottom'>
-                    <div class='smaller-half-circle'>
-    
+
+
+                <div id="bottom-center">
+                    <div class="col-sm-4" id='half-circle-bottom'>
+                        <div class='smaller-half-circle'>
+        
+                        </div>
+                    </div>
+                    <div id="pokemon-list-btn-container">
+                        <button id="pokemon-list-btn">POKEDEX</button>
                     </div>
                 </div>
-    
+        
                 <div class="col-sm-4" id='right-container'>
                     <span id='right' class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
                 </div>
@@ -135,10 +146,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src='./components/global.js'></script>
     <script src='./components/classes.js'></script>
+    <script src="./components/pokemonlist.js"></script>
     <script src='./components/select.js'></script>
     <script src='./components/start.js'></script>
     <script src='./components/search.js'></script>
-    <script src="script.js"></script>
     <script src='./components/easteregg.js'></script>
     <script src='./components/leftright.js'></script>
     <script src="./components/power.js"></script>

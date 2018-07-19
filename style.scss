@@ -13,6 +13,7 @@
 @import './partials/middle';
 @import './partials/middle-search';
 @import './partials/id-name-type';
+@import './partials/pokemon-list';
 @import './partials/img-and-description';
 @import './partials/stats.scss';
 @import './partials/leftright.scss';
@@ -66,4 +67,15 @@ body {
 .master-ball:after {
   right: 3%;
   transform: rotate(130deg);
+}
+
+.clickable {
+    &:hover {
+        cursor: pointer;
+        color: #888;
+    }
+}
+
+.is-clicked {
+    background: #0f0;
 }

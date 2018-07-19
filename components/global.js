@@ -1,4 +1,5 @@
 // Content specific to a component will be located in its respective component
+let isPokemonMaster = false;
 
 // Dynamic content; might not be full list
 const img = document.getElementById('img'),
@@ -86,6 +87,15 @@ function addPokemon(pNameOrInput) {
         
             // Add Pokemon to Pokedex
             trainer.add(pokemon);
+            const pokeId = document.getElementById(`pokedex-${pokemon.id}`);
+            pokeId.classList.remove('false');
+            let stringId = String(pokemon.id);
+            while (stringId.length !== 3) {
+                stringId = '0' + stringId;
+            }
+
+            pokeId.textContent = `${stringId}: ${pokemon.name.toUpperCase()}`;
+
         }).then(() => {
             // Get pokemon description
             axios.get(`https://www.pokeapi.co/api/v2/pokemon-species/${pNameOrInput}/`)

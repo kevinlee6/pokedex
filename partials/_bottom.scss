@@ -12,24 +12,43 @@
     border-top: 3px;
     border-radius: 0 0 20px 20px;
 
-    #half-circle-bottom {
-        align-self: flex-start;
-        background-color: $secondary-color;
-        width: 100px;
-        height: 50px;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-        border: 2px solid black;
-        border-top: 1px solid black;
-    }
+    #bottom-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
 
-    .smaller-half-circle {
-        margin: 0 auto -20% auto;
-        width: 20px;
-        height: 10px;
-        background-color: rgb(78, 78, 78);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-top: 0;
+        #half-circle-bottom {
+            background-color: $secondary-color;
+            width: 100px;
+            height: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 2px solid black;
+            border-top: 1px solid black;
+    
+            .smaller-half-circle {
+                margin: 0 auto -20% auto;
+                width: 20px;
+                height: 10px;
+                background-color: rgb(78, 78, 78);
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top: 0;
+            }
+        }
+
+        #pokemon-list-btn-container{
+            margin-bottom: 10px;
+
+            #pokemon-list-btn {
+                border-radius: 15px;
+                padding: 8 12px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
     }
 }
