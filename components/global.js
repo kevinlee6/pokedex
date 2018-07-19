@@ -10,7 +10,10 @@ const img = document.getElementById('img'),
       hp = document.getElementById('hp'),
       atk = document.getElementById('atk'),
       def = document.getElementById('def'),
-      abil = document.getElementById('abil');
+      abil = document.getElementById('abil'),
+      moves = document.getElementById('moves'),
+      height = document.getElementById('height'),
+      weight = document.getElementById('weight');
 
 // Static content; might not be full list
 const startBtn = document.getElementById('start-btn'),
@@ -54,6 +57,17 @@ function changeData(pokemon) {
     def.style.width = `${pokemon.def / 2.3}%`;
 
     abil.textContent = `${pokemon.abil.map(x=>x.toUpperCase()).join(' | ')}`;
+
+    moves.innerText = '';
+    for (let i of pokemon.moves) {
+        let move = document.createElement('li');
+        move.innerText = i.toUpperCase();
+        moves.appendChild(move);
+    }
+
+    height.innerText = `${pokemon.height/10}m`;
+
+    weight.innerText = `${pokemon.weight/10}kg`;
 };
 
 function addPokemon(pNameOrInput) {
@@ -68,7 +82,7 @@ function addPokemon(pNameOrInput) {
         .then(response => {
             const data = response.data;
             // Instantiate Pokemons object to be added to Pokedex
-            pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.types.map(x=>x.type.name), data.sprites.front_default);
+            pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.types.map(x=>x.type.name), data.sprites.front_default, data.moves.map(x=>x.move.name), data.height, data.weight);
         
             // Add Pokemon to Pokedex
             trainer.add(pokemon);

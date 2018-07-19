@@ -3,8 +3,24 @@
   src: url("./font/pokemon.ttf");
 }
 
-@media screen and (max-width: 400px) {
-  #id-and-name {
+@media screen and (max-width: 500px) {
+  #start #start-name {
+    width: 100%;
+  }
+  #search #select {
+    margin-right: 0 !important;
+  }
+  #search #input-name {
+    font-size: 0.8em;
+  }
+  #search #search-btn {
+    font-size: 0.8em;
+  }
+  #id-name-type-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #id-name-type-container #id-and-name {
     font-size: 0.9em;
   }
   #types {
@@ -107,8 +123,8 @@
 }
 
 .close {
-  -webkit-animation: close 0.6s ease-in forwards;
-          animation: close 0.6s ease-in forwards;
+  -webkit-animation: close 0.3s ease-in forwards;
+          animation: close 0.3s ease-in forwards;
 }
 
 @-webkit-keyframes wobble-more {
@@ -424,6 +440,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 100%;
+  max-height: 166px;
   max-width: 550px;
   height: 16%;
   background: linear-gradient(170deg, #ff8686, red);
@@ -496,6 +513,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  max-height: 166px;
   max-width: 550px;
   height: 16%;
   border: 5px solid red;
@@ -703,6 +721,59 @@
 #stats #abil-container #abil {
   margin-top: 3px;
   margin-left: 10px;
+}
+
+#stats #moves-height-weight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#stats #moves-height-weight #moves-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: pink;
+  width: 56%;
+  padding: 10px 0 10px 5px;
+  border-radius: 20px;
+  height: 137px;
+}
+
+#stats #moves-height-weight #moves-container #moves-btn {
+  border-radius: 20px;
+  padding: 10px 5px;
+  margin-right: 15px;
+  background: #f3516c;
+}
+
+#stats #moves-height-weight #moves-container #moves-btn p {
+  margin: 0;
+}
+
+#stats #moves-height-weight #moves-container #moves-btn:focus {
+  outline: none;
+}
+
+#stats #moves-height-weight #moves-container span {
+  text-decoration: underline;
+}
+
+#stats #moves-height-weight #moves-container ul {
+  overflow: auto;
+  height: 90%;
+  padding-left: 15px;
+}
+
+#stats #moves-height-weight #height-weight {
+  width: 40%;
+  height: 40%;
+  padding: 20px;
+  background: #bbb;
+  border-radius: 20px;
 }
 
 .glyphicon {

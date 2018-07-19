@@ -1,6 +1,30 @@
-@media screen and (max-width: 400px) {
-    #id-and-name {
-        font-size: 0.9em;
+@media screen and (max-width: 500px) {
+    #start {
+        #start-name {
+            width: 100%;
+        }
+    }
+
+    #search {
+        #select {
+            margin-right: 0 !important;
+        }
+
+        #input-name {
+            font-size: 0.8em;
+        }
+
+        #search-btn {
+            font-size: 0.8em;
+        }
+    }
+    
+    #id-name-type-container {
+        flex-wrap: wrap;
+
+        #id-and-name {
+            font-size: 0.9em;
+        }
     }
 
     #types {

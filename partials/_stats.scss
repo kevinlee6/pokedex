@@ -56,4 +56,49 @@
             margin-left: 10px;
         }
     }
+    #moves-height-weight {
+        display: flex;
+        justify-content: space-between;
+    
+        #moves-container {
+            display: flex;
+            background: pink;
+            width: 56%;
+            padding: 10px 0 10px 5px;            border-radius: 20px;
+            height: 137px;
+
+            #moves-btn {
+                border-radius: 20px;
+                padding: 10px 5px;
+                margin-right: 15px;
+                background: rgb(243, 81, 108);
+
+                p {
+                    margin: 0;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            span {
+                text-decoration: underline;
+            }
+
+            ul {
+                overflow: auto;
+                height: 90%;
+                padding-left: 15px;
+            }
+        }
+
+        #height-weight {
+            width: 40%;
+            height: 40%;
+            padding: 20px;
+            background: #bbb;
+            border-radius: 20px;
+        }
+    }
 }
