@@ -261,6 +261,29 @@
           animation: wobble-less 1s;
 }
 
+@-webkit-keyframes slide-up {
+  0% {
+    margin-top: 15%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    margin-top: 15%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.slide-up {
+  -webkit-animation: slide-up 1s forwards;
+          animation: slide-up 1s forwards;
+}
+
 .normal {
   background-color: #A8A878;
   color: #eee;
@@ -388,14 +411,36 @@
 }
 
 #start {
-  text-align: center;
-  position: relative;
-  top: 30%;
+  left: auto;
+  right: auto;
   font-family: 'pokemon';
   background: rgba(188, 188, 188, 0.9);
   width: 75%;
-  margin: auto;
+  margin: 10px auto;
   padding: 2% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#start #info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #start #start-name {
@@ -416,7 +461,7 @@
 }
 
 #pokedex {
-  height: 100%;
+  height: 0;
   min-height: 426px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,7 +476,7 @@
 }
 
 #top {
-  position: relative;
+  min-height: 100px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -513,6 +558,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  min-height: 100px;
   max-height: 166px;
   max-width: 550px;
   height: 16%;

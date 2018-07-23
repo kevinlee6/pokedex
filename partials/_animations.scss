@@ -117,3 +117,12 @@
 .wobble-less {
     animation: wobble-less 1s;
 }
+
+@keyframes slide-up {
+  0% { margin-top: 15%; }
+  100% { margin-top: 0; } 
+}
+
+.slide-up {
+  animation: slide-up 1s forwards;
+}

@@ -9,6 +9,8 @@ startBtn.addEventListener('click', e => {
     // Remove start element once wobble is complete
     setTimeout(() => {
         document.body.removeChild(start);
+        pokedex.style.height = '100%';
+        pokedex.classList.add('slide-up');
     }, 6500);
 
     // Shake pokeball, 6s total animation
@@ -39,7 +41,6 @@ startBtn.addEventListener('click', e => {
         middle.classList.remove('hidden');
     }, 6500);
     setTimeout(() => {
-        pokedex.removeAttribute('style');
         middle.classList.remove('open');
     }, 8000);
 
