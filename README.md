@@ -1,5 +1,7 @@
 <h1>Pokédex App</h1>
 
+<img src='./images/pokedex-home.png' alt='Pokedex Homepage' />
+
 <p>
 Pokédex made possible with:
     <ul>
