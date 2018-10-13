@@ -79,7 +79,7 @@ function addPokemon(pNameOrInput) {
     // Not the same as Trainer.add function
     // Dynamically adds Pokemon to Pokedex/Trainer Obj from API
     let pokemon;
-    axios.get(`https://www.pokeapi.co/api/v2/pokemon/${pNameOrInput}`)
+    fetch(`https://www.pokeapi.co/api/v2/pokemon/${pNameOrInput}`)
         .then(response => {
             const data = response.data;
             // Instantiate Pokemons object to be added to Pokedex
@@ -98,7 +98,7 @@ function addPokemon(pNameOrInput) {
 
         }).then(() => {
             // Get pokemon description
-            axios.get(`https://www.pokeapi.co/api/v2/pokemon-species/${pNameOrInput}/`)
+            fetch(`https://www.pokeapi.co/api/v2/pokemon-species/${pNameOrInput}/`)
                 .then(response => {
                 const data2 = response.data.flavor_text_entries;
                 let i = 0;
