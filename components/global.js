@@ -79,9 +79,8 @@ function addPokemon(pNameOrInput) {
     // Not the same as Trainer.add function
     // Dynamically adds Pokemon to Pokedex/Trainer Obj from API
     let pokemon;
-    fetch(`https://www.pokeapi.co/api/v2/pokemon/${pNameOrInput}`)
-        .then(response => {
-            const data = response.data;
+    fetch(`https://www.pokeapi.co/api/v2/pokemon/${pNameOrInput}/`)
+        .then(response => response.json()).then(data => {
             // Instantiate Pokemons object to be added to Pokedex
             pokemon = new Pokemon(data.name, data.id, data.stats[5].base_stat, data.stats[4].base_stat, data.stats[3].base_stat, data.abilities.map(x => x.ability.name), data.types.map(x=>x.type.name), data.sprites.front_default, data.moves.map(x=>x.move.name), data.height, data.weight);
         
@@ -98,9 +97,9 @@ function addPokemon(pNameOrInput) {
 
         }).then(() => {
             // Get pokemon description
-            fetch(`https://www.pokeapi.co/api/v2/pokemon-species/${pNameOrInput}/`)
-                .then(response => {
-                const data2 = response.data.flavor_text_entries;
+            fetch(`https://www.pokeapi.co/api/v2/pokemon-species/${pNameOrInput}/`) 
+                .then(response => response.json()).then(data => {
+                const data2 = data.flavor_text_entries;
                 let i = 0;
 
                 for (i; i < data2.length; i++) {
