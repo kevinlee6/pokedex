@@ -12,7 +12,7 @@ Pokédex made possible with:
             </ul>
         <li>Javascript</li>
             <ul>
-            <li>Axios Library</li>
+            <li>Fetch</li>
             </ul>
         <li>pokeapi.co's API</li>
     </ul>
