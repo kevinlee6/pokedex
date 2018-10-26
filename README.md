@@ -8,7 +8,7 @@ Pokédex made possible with:
 - SCSS
   - Bootstrap
 - Javascript
-  - Fetch
+  - Fetch API
 - pokeapi.co's API
 
 A pokédex designed with mobile responsiveness in mind. Starts with 3 fixed (set) pokémon, but able to add more within the app via a hidden button in the pokéball. Utilizes API from [pokeapi.co](https://pokeapi.co)
