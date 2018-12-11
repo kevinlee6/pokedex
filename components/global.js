@@ -94,7 +94,6 @@ function addPokemon(pNameOrInput) {
             }
 
             pokeId.textContent = `${stringId}: ${pokemon.name.toUpperCase()}`;
-
         }).then(() => {
             // Get pokemon description
             fetch(`https://www.pokeapi.co/api/v2/pokemon-species/${pNameOrInput}/`) 

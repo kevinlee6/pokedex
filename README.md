@@ -1,4 +1,4 @@
-# [Pokédex App](https://kevin-lee-pokedex.herokuapp.com/)
+# [Pokédex App](https://kevinlee6.github.io/pokedex/)
 
 ![Pokedex Homepage](./images/pokedex-home.png)
 
