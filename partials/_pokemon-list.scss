@@ -1,15 +1,15 @@
 #pokemon-list {
-     overflow: auto;
-     margin: 20px;
+  overflow: auto;
+  margin: 20px;
 
-     #filter-btn {
-        display: block;
-        margin: 10px auto;
-        border-radius: 10px;
-        margin-bottom: 20px;
+  #filter-btn {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
 
-        &:focus {
-            outline: none;
-        }
+    &:focus {
+      outline: none;
     }
+  }
 }

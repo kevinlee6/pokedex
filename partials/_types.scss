@@ -1,78 +1,78 @@
 @mixin types($color) {
-    background-color: $color;
-    color: #eee;
-    padding: 6px;
-    border-radius: 10px;
+  background-color: $color;
+  color: #eee;
+  padding: 6px;
+  border-radius: 10px;
 }
 
 .normal {
-    @include types(#A8A878);
+  @include types(#a8a878);
 }
 
 .fighting {
-    @include types(#C03028);
+  @include types(#c03028);
 }
 
 .flying {
-    @include types(#A890F0);
+  @include types(#a890f0);
 }
 
 .poison {
-    @include types(#A040A0);
+  @include types(#a040a0);
 }
 
 .ground {
-    @include types(#E0C068);
+  @include types(#e0c068);
 }
 
 .rock {
-    @include types(#B8A038);
+  @include types(#b8a038);
 }
 
 .bug {
-    @include types(#A8B820);
+  @include types(#a8b820);
 }
 
 .ghost {
-    @include types(#705898);
+  @include types(#705898);
 }
 
 .steel {
-    @include types(#B8B8D0);
+  @include types(#b8b8d0);
 }
 
 .fire {
-    @include types(#F08030);
+  @include types(#f08030);
 }
 
 .water {
-    @include types(#6890F0);
+  @include types(#6890f0);
 }
 
 .grass {
-    @include types(#78C850);
+  @include types(#78c850);
 }
 
 .electric {
-    @include types(#F8D030);
+  @include types(#f8d030);
 }
 
 .psychic {
-    @include types(#F85888);
+  @include types(#f85888);
 }
 
 .ice {
-    @include types(#98D8D8);
+  @include types(#98d8d8);
 }
 
 .dragon {
-    @include types(#7038F8);
+  @include types(#7038f8);
 }
 
 .dark {
-    @include types(#705848);
+  @include types(#705848);
 }
 
 .fairy {
-    @include types(#EE99AC);
+  @include types(#ee99ac);
 }

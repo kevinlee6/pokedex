@@ -1,62 +1,54 @@
 #top {
-    min-height: 100px;
-    z-index: 1;
+  z-index: 1;
+  background: linear-gradient(170deg, rgb(255, 134, 134), $main-color);
+  border-top: 3px solid $main-color;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid rgb(0, 0, 134);
+
+  #top-left {
+    margin-right: auto;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+    margin-top: 10px;
+    word-break: break-all;
+    white-space: nowrap;
+    color: palegoldenrod;
+  }
+
+  #power-container {
+    margin-left: auto;
+    margin-right: 20px;
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    max-height: 166px;
-    max-width: 550px;
-    height: 16%;
-    background: linear-gradient(170deg, rgb(255, 134, 134), $main-color);
-    border: 5px solid $main-color;
-    border-top: 3px solid $main-color;
-    border-right: 2px solid $main-color;
-    border-radius: 10px 10px 0 0;
-    border-bottom: 1px solid rgb(0, 0, 134);
+    justify-content: flex-end;
+    align-items: center;
 
-    #top-left {
-        margin-right: auto;
-        font-family: 'Helvetica Neue', sans-serif;
-        font-size: 2em;
-        margin-top: 10px;
-        white-space: nowrap;
-        color: palegoldenrod;
+    #power {
+      color: palegoldenrod;
+      font-size: 4.6em;
+
+      &:hover {
+        color: white;
+      }
     }
+  }
 
-    #power-container {
-        margin-left: auto;
-        margin-right: 20px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+  #half-circle-top {
+    position: absolute;
+    align-self: flex-end;
+    width: 100px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background: linear-gradient(to left, $main-color, rgb(255, 126, 126));
+    border: 2px solid black;
+  }
 
-        #power {
-            color: palegoldenrod;
-            font-size: 4.6em;
-        
-            &:hover {
-                color: white;
-            }
-        }
-    }
-
-    #half-circle-top {
-        position: absolute;
-        align-self: flex-end;
-        width: 100px;
-        height: 50px;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        background: linear-gradient(to left, $main-color, rgb(255, 126, 126));
-        border: 2px solid black;
-    }
-
-    .smaller-half-circle {
-        margin: 57% auto 0 auto;
-        width: 22px;
-        height: 22px;
-        background-color: $secondary-color;
-        border-radius: 25px;
-        border: 3px solid black;
-    }
+  .smaller-half-circle {
+    margin: 57% auto 0 auto;
+    width: 22px;
+    height: 22px;
+    background-color: $secondary-color;
+    border-radius: 25px;
+    border: 3px solid black;
+  }
 }

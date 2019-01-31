@@ -1,8 +1,7 @@
 @font-face {
-    font-family: 'pokemon';
-    src: url('./font/pokemon.ttf');
+  font-family: 'pokemon';
+  src: url('./font/pokemon.ttf');
 }
-@import './partials/media-queries';
 @import './partials/animations';
 @import './partials/types';
 @import './partials/start';
@@ -17,39 +16,40 @@
 @import './partials/img-and-description';
 @import './partials/stats.scss';
 @import './partials/leftright.scss';
-
-html {
-    height: 100%;
-}
+@import './partials/media-queries';
 
 body {
-    height: 100%;
-    font-family: 'pokemon';
-    background-image: url('https://images3.alphacoders.com/628/62865.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+  font-family: 'pokemon';
+  background-image: url('https://images3.alphacoders.com/628/62865.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  height: 100vh;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .loading {
-    width: 33% !important;
-    pointer-events: none;
-    background: grey !important;
-    color: white;
+  width: 33% !important;
+  pointer-events: none;
+  background: grey !important;
+  color: white;
 
-    &:hover {
-        background: grey !important;
-    }
+  &:hover {
+    background: grey !important;
+  }
 }
 
 .master-ball {
-    background: #7e308e !important;
+  background: #7e308e !important;
 }
 
-.master-ball:before, .master-ball:after {
+.master-ball:before,
+.master-ball:after {
   content: '';
   height: 40px;
   width: 28px;
@@ -71,12 +71,12 @@ body {
 }
 
 .clickable {
-    &:hover {
-        cursor: pointer;
-        color: #888;
-    }
+  &:hover {
+    cursor: pointer;
+    color: #888;
+  }
 }
 
 .is-clicked {
-    background: #0f0;
+  background: #0f0;
 }

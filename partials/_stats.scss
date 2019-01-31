@@ -1,104 +1,105 @@
 #stats {
-    font-family: 'pokemon';
-    margin: 2% 4%;
+  font-family: 'pokemon';
+  margin: 2% 4%;
 
-    #hp-container {
-        background: $hp-color;
-        border-radius: 10px;
+  #hp-container {
+    background: $hp-color;
+    border-radius: 10px;
 
-        #hp {
-            background: red;
-            white-space: nowrap;
-            border-radius: 15px;
-            padding: 5px 10px 5px 15px;
-        }
+    #hp {
+      background: red;
+      white-space: nowrap;
+      border-radius: 15px;
+      padding: 5px 10px 5px 15px;
+    }
+  }
+
+  #atk-container {
+    background: darkorange;
+    border-radius: 10px;
+
+    #atk {
+      white-space: nowrap;
+      background: $atk-color;
+      border-radius: 15px;
+      padding: 5px 10px 5px 15px;
+    }
+  }
+
+  #def-container {
+    background: $def-color;
+    border-radius: 10px;
+
+    #def {
+      white-space: nowrap;
+      border-radius: 10px;
+      background: gold;
+      border-radius: 15px;
+      padding: 5px 10px 5px 15px;
+    }
+  }
+
+  #abil-container {
+    width: 100%;
+    background-color: lightseagreen;
+    border-radius: 10px;
+    padding-top: 5px;
+
+    span {
+      text-decoration: underline;
+      margin-left: 10px;
+      margin-bottom: 3px;
     }
 
-    #atk-container {
-        background: darkorange;
-        border-radius: 10px;
+    #abil {
+      margin-top: 3px;
+      margin-left: 10px;
+    }
+  }
+  #moves-height-weight {
+    display: flex;
+    justify-content: space-between;
 
-        #atk {
-            white-space: nowrap;
-            background: $atk-color;
-            border-radius: 15px;
-            padding: 5px 10px 5px 15px;
+    #moves-container {
+      display: flex;
+      background: pink;
+      width: 56%;
+      padding: 10px 0 10px 5px;
+      border-radius: 20px;
+      height: 137px;
+
+      #moves-btn {
+        border-radius: 20px;
+        padding: 10px 5px;
+        margin-right: 15px;
+        background: rgb(243, 81, 108);
+
+        p {
+          margin: 0;
         }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        text-decoration: underline;
+      }
+
+      #moves {
+        overflow: auto;
+        height: 90%;
+        padding-left: 15px;
+      }
     }
 
-    #def-container {
-        background: $def-color;
-        border-radius: 10px;
-
-        #def {
-            white-space: nowrap;
-            border-radius: 10px;
-            background: gold;
-            border-radius: 15px;
-            padding: 5px 10px 5px 15px;
-        }
+    #height-weight {
+      width: 40%;
+      height: 40%;
+      padding: 20px;
+      background: #bbb;
+      border-radius: 20px;
     }
-
-    #abil-container {
-        width: 100%;
-        background-color: lightseagreen;
-        border-radius: 10px;
-        padding-top: 5px;
-
-        span {
-            text-decoration: underline;
-            margin-left: 10px;
-            margin-bottom: 3px;
-        }
-
-        #abil {
-            margin-top: 3px;
-            margin-left: 10px;
-        }
-    }
-    #moves-height-weight {
-        display: flex;
-        justify-content: space-between;
-    
-        #moves-container {
-            display: flex;
-            background: pink;
-            width: 56%;
-            padding: 10px 0 10px 5px;            border-radius: 20px;
-            height: 137px;
-
-            #moves-btn {
-                border-radius: 20px;
-                padding: 10px 5px;
-                margin-right: 15px;
-                background: rgb(243, 81, 108);
-
-                p {
-                    margin: 0;
-                }
-
-                &:focus {
-                    outline: none;
-                }
-            }
-
-            span {
-                text-decoration: underline;
-            }
-
-            #moves {
-                overflow: auto;
-                height: 90%;
-                padding-left: 15px;
-            }
-        }
-
-        #height-weight {
-            width: 40%;
-            height: 40%;
-            padding: 20px;
-            background: #bbb;
-            border-radius: 20px;
-        }
-    }
+  }
 }

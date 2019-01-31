@@ -1,42 +1,43 @@
 @media screen and (max-width: 500px) {
-    #start {
-        #start-name {
-            width: 100%;
-        }
+  #start {
+    width: 90vw;
+    #start-name {
+      width: 100%;
+    }
+  }
+
+  #search {
+    #select {
+      margin-right: 0 !important;
     }
 
-    #search {
-        #select {
-            margin-right: 0 !important;
-        }
-
-        #input-name {
-            font-size: 0.8em;
-        }
-
-        #search-btn {
-            font-size: 0.8em;
-        }
-    }
-    
-    #id-name-type-container {
-        flex-wrap: wrap;
-
-        #id-and-name {
-            font-size: 0.9em;
-        }
+    #input-name {
+      font-size: 0.8em;
     }
 
-    #types {
-        font-size: 0.7em;
+    #search-btn {
+      font-size: 0.8em;
     }
+  }
 
-    #stats {
-        font-size: 0.8em;
-    }
+  #id-name-type-container {
+    flex-wrap: wrap;
 
-    .loading {
-        min-width: 120px;
-        margin-left: 5px;
+    #id-and-name {
+      font-size: 0.9em;
     }
+  }
+
+  #types {
+    font-size: 0.7em;
+  }
+
+  #stats {
+    font-size: 0.8em;
+  }
+
+  .loading {
+    min-width: 120px;
+    margin-left: 5px;
+  }
 }

@@ -1,35 +1,36 @@
 #start {
-    left: auto;
-    right: auto;
-    font-family: 'pokemon';
-    background: rgba(188, 188, 188, 0.9);
-    width: 75%;
-    margin: 10px auto;
-    padding: 2% 0;
-    display:flex;
+  left: auto;
+  right: auto;
+  font-family: 'pokemon';
+  background: rgba(188, 188, 188, 0.9);
+  width: 75%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #info {
+    display: flex;
     flex-direction: column;
     align-items: center;
+  }
 
-    #info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  #start-name {
+    padding: 5px;
+  }
+
+  #start-btn {
+    border-radius: 20px;
+    padding: 5px 10px;
+
+    &:hover {
+      background: #ddd;
     }
 
-    #start-name {
-        padding: 5px;
+    &:focus {
+      outline: none;
     }
-
-    #start-btn {
-        border-radius: 20px;
-        padding: 5px 10px;
-
-        &:hover {
-            background: #ddd;
-        }
-
-        &:focus {
-            outline: none;
-        }
-    }
+  }
 }

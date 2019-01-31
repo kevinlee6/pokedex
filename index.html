@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body>
+  <div class='main-container'>
     <div id="start">
         <div id="info">
                 <p>
@@ -31,7 +32,7 @@
     </div>
 
     <div id='pokedex'>
-        <div id='top' class="row">
+        <div id='top' class="row pokedex-shell">
             <div id='top-left' class="col-sm-4 hidden"></div>
 
             <div class="col-sm-4" id='half-circle-top'>
@@ -123,7 +124,7 @@
             </div>
         </div>
 
-        <div id='bottom' class="row">
+        <div id='bottom' class="row pokedex-shell">
                 <div class="col-sm-4" id='left-container'>
                     <span id='left' class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
                 </div>
@@ -145,6 +146,8 @@
                 </div>
         </div>
     </div>
+
+  </div>
     
     <script src='./components/global.js'></script>
     <script src='./components/classes.js'></script>
