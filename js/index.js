@@ -4,6 +4,8 @@ import animate from './startAnimation.js';
 import eventListeners from './eventListeners.js';
 import makeList from './pokemonList.js';
 
+let counter;
+
 document.getElementById('start-form').addEventListener('submit', e => {
   e.preventDefault();
   const startForm = document.getElementById('start-form');
@@ -15,6 +17,6 @@ document.getElementById('start-form').addEventListener('submit', e => {
 
   // Instantiate Pokedex
   const pokedex = new Pokedex(name);
-  eventListeners(pokedex);
+  eventListeners(pokedex, counter);
   makeList(pokedex);
 });

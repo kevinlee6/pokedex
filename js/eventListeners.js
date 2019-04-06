@@ -1,4 +1,4 @@
-export default pokedex => {
+export default (pokedex, counter) => {
   // Search event listener
   const searchBtn = document.getElementById('search-btn');
   const inputField = document.getElementById('input');
@@ -65,7 +65,43 @@ export default pokedex => {
     }
   });
 
-  // TODO : Binary search to maintain order of pokemon
-  // const left = document.getElementById('left')
-  // const right = document.getElementById('right');
+  // TODO: Use different data structure to maintain order; something related to binary search?
+  const left = document.getElementById('left');
+  const right = document.getElementById('right');
+
+  const setCounter = arr => {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].name === pokedex.name.textContent.toLowerCase()) {
+        counter = i;
+        break;
+      }
+    }
+  };
+
+  left.addEventListener('click', () => {
+    if (document.activeElement === inputField) return;
+
+    // set the counter
+    const arr = Object.values(pokedex.pokemonByName);
+    setCounter(arr);
+
+    if (--counter < 0) counter = arr.length - 1;
+    pokedex.changeData(arr[counter]);
+  });
+
+  right.addEventListener('click', () => {
+    if (document.activeElement === inputField) return;
+
+    // set the counter
+    const arr = Object.values(pokedex.pokemonByName);
+    setCounter(arr);
+
+    if (++counter >= arr.length) counter = 0;
+    pokedex.changeData(arr[counter]);
+  });
+
+  window.addEventListener('keydown', e => {
+    if (e.keyCode === 37) left.click();
+    else if (e.keyCode === 39) right.click();
+  });
 };
