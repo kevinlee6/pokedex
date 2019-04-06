@@ -25,9 +25,9 @@
                 </p>
         </div>
         <p>Enter your name to get started:</p>
-        <form>
-            <input type="text" id='start-name' placeholder="ENTER NAME" />
-            <input id='start-btn' type="submit" value='ENTER'/>
+        <form id="start-form">
+            <input type="text" placeholder="ENTER NAME" />
+            <button>ENTER</button>
         </form>
     </div>
 
@@ -47,14 +47,8 @@
         <div id='middle' class='row hidden'>
             <div id="main-display">
                 <div id='search' class="row">
-                    <select name="select" id="select">
-                        <option id='select-name' value="name">NAME</option>
-                        <option id='select-id' value="id">ID</option>
-                    </select>
-
                     <form>
-                        <input type="text" id='input-name' placeholder="ENTER NAME"/>
-                        <input type="text" id='input-id' class='hidden' placeholder="ENTER ID" />
+                        <input type="text" id='input' placeholder="NAME OR ID"/>
                         <input type='submit' value='FIND' id='search-btn' />
                     </form>
                 </div>
@@ -146,18 +140,7 @@
                 </div>
         </div>
     </div>
-
   </div>
-    
-    <script src='./components/global.js'></script>
-    <script src='./components/classes.js'></script>
-    <script src="./components/pokemonlist.js"></script>
-    <script src='./components/select.js'></script>
-    <script src='./components/start.js'></script>
-    <script src='./components/search.js'></script>
-    <script src='./components/easteregg.js'></script>
-    <script src='./components/leftright.js'></script>
-    <script src="./components/power.js"></script>
-    <script src="./components/moves.js"></script>
+  <script type='module' src='./js/index.js'></script>
 </body>
 </html>

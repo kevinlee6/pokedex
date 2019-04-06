@@ -8,6 +8,8 @@ Pokdéx made possible with:
 - SCSS
   - Bootstrap
 - Javascript
+  - ES6 Modules
+  - Promises and Async/Await
   - Fetch API
 - PokéAPI.co's API
 
