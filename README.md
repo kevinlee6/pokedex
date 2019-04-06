@@ -1,6 +1,6 @@
 # [Pokédex App](https://kevinlee6.github.io/pokedex/)
 
-![Pokedex Homepage](./images/pokedex-home.png)
+![Pokedex Homepage](./public/pokedex-home.png)
 
 A Pokédex designed with mobile responsiveness in mind. Starts with 3 set Pokémon, but able to add more within the app via a hidden button in the pokéball. Utilizes API from [PokéAPI](https://pokeapi.co).
 
@@ -31,11 +31,7 @@ A Pokédex designed with mobile responsiveness in mind. Starts with 3 set Pokém
 ## To run locally
 
 - Clone repo
-- Due to CORS issue with ES6 modules, you'd have to run it as a server
-  - example: in command line / in project directory with python:
-  ```
-  python3 -m http.server 3000
-  ```
-  - then navigate to localhost:3000 in web browser
+- Navigate to repo (either in command line or file explorer)
+- Open index.html file in your favorite web browser
 
 App available through [https://kevinlee6.github.io/pokedex/](https://kevinlee6.github.io/pokedex/)
